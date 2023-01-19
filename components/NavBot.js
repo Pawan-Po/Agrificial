@@ -63,8 +63,7 @@ function NavBot() {
           <Tab.Screen name={TipsandFAQ} component={TipsFAQ}/> 
           <Tab.Screen name={ProfileName} component={ProfileScreen} />
           <Tab.Screen name ={samera0} component={Camera0} tabBarOptions={{
-            showIcon : 'false',
-            showLabel: 'false',
+            
           }
         }/>
  
