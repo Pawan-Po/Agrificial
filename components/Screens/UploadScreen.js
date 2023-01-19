@@ -22,6 +22,8 @@ import Button from './ButtonUpload';
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
 
+import Scans from './Camera0';
+
 
 
 export default function UploadScreen({navigation}) {

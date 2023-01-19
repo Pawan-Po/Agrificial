@@ -9,6 +9,8 @@ import UploadScreen from './Screens/UploadScreen';
 import TipsFAQ from './Screens/TipsFAQ';
 import ProfileScreen from './Screens/ProfileScreen';
 import Camera0 from './Screens/Camera0';
+import Scans from './Screens/Camera0';
+import { setStatusBarHidden } from 'expo-status-bar';
 
 
 
@@ -18,7 +20,7 @@ const UploadName = "Upload";
 const ProfileName = "Profile";
 const TipsandFAQ = "TipsFAQ";
 const samera0 = "Scans";
-
+const Stack = "";
 
 const Tab = createBottomTabNavigator();
 
@@ -44,8 +46,6 @@ function NavBot() {
               } else if (rn === ProfileName) {
                 iconName = focused ? 'person' : 'person-outline';
               }
-
-  
               // You can return any component that you like here!
               return <Ionicons name={iconName} size={32} color={color} />;
             },
@@ -54,7 +54,7 @@ function NavBot() {
             activeTintColor: 'green',
             inactiveTintColor: 'grey',
             labelStyle: {fontSize: 10 },
-            style: { padding: 10, height: 50}
+            style: { padding: 10, height: 50},
             
           }}>
   
@@ -62,10 +62,10 @@ function NavBot() {
           <Tab.Screen name={UploadName} component={UploadScreen} />
           <Tab.Screen name={TipsandFAQ} component={TipsFAQ}/> 
           <Tab.Screen name={ProfileName} component={ProfileScreen} />
-          <Tab.Screen name ={samera0} component={Camera0} screenOptions={{
-            
-          }
-        }/>
+          <Tab.Screen name ={samera0} component={Camera0} options={{
+            tabBarButton: () => null,
+            tabBarVisible: false,}}
+    />
  
           
         </Tab.Navigator>
