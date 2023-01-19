@@ -1,15 +1,16 @@
 import * as React from 'react';
-
 import NavBot from './components/NavBot';
 
 
 
 function App() {
-  return ( 
+  return (
 
-      <NavBot/>
+     <NavBot/>
 
   );
+    
 }
+
 
 export default App;

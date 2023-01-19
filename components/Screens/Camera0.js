@@ -1,4 +1,4 @@
-import { Camera, cameraType } from 'expo-camera';
+import { Camera, CameraType } from 'expo-camera';
 import * as MediaLibrary from 'expo-media-library';
 import Button from '../Button';
 import React, { useState, useEffect, useRef } from 'react';
@@ -118,7 +118,7 @@ export default function Scans({navigation}) {
 
             </View>
           )}
-            <Button title="Go back" onPress={() => navigation.navigate('Upload')} icon="back" color={'black'}/>  
+            <Button title="Back" onPress={() => navigation.navigate('Upload')} icon="back" color={'black'}/>  
           </View>
     </View>
     );

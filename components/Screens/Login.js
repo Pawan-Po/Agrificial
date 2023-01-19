@@ -11,6 +11,7 @@ import {
   Pressable,
   Modal,
   Image,
+  Alert,
   TextInput,
   Button,
   TouchableOpacity,
@@ -85,9 +86,6 @@ export default function Login() {
       <TouchableOpacity>
         <Text style={styles.forgot_button}>Forgot Password?</Text> 
       </TouchableOpacity> 
-      <View  style={styles.loginBtn1} >
-          <Button title="Take a picture" icon="camera" />
-        </View>
       <TouchableOpacity style={styles.loginBtn1}>
         <Text style={styles.loginText}>Google</Text> 
       </TouchableOpacity> 
@@ -95,6 +93,7 @@ export default function Login() {
         <Text style={styles.loginText}>Facebook</Text> 
       </TouchableOpacity> 
     </View> 
+    
     </Modal>
     
 
