@@ -8,6 +8,8 @@ import HomeScreen from './Screens/HomeScreen';
 import UploadScreen from './Screens/UploadScreen';
 import TipsFAQ from './Screens/TipsFAQ';
 import ProfileScreen from './Screens/ProfileScreen';
+import Camera0 from './Screens/Camera0';
+
 
 
 //Screen names
@@ -15,6 +17,8 @@ const homeName = "Home";
 const UploadName = "Upload";
 const ProfileName = "Profile";
 const TipsandFAQ = "TipsFAQ";
+const samera0 = "Scans";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +28,7 @@ function NavBot() {
         <Tab.Navigator
           initialRouteName={homeName}
           screenOptions={({ route }) => ({
-            tabBarIcon: ({ focused, color, size }) => {
+            tabBarIcon: ({ focused, color}) => {
               let iconName;
               let rn = route.name;
   
@@ -40,6 +44,7 @@ function NavBot() {
               } else if (rn === ProfileName) {
                 iconName = focused ? 'person' : 'person-outline';
               }
+
   
               // You can return any component that you like here!
               return <Ionicons name={iconName} size={32} color={color} />;
@@ -48,17 +53,24 @@ function NavBot() {
           tabBarOptions={{
             activeTintColor: 'green',
             inactiveTintColor: 'grey',
-            labelStyle: { paddingBottom: 2, fontSize: 10 },
+            labelStyle: {fontSize: 10 },
             style: { padding: 10, height: 50}
+            
           }}>
   
           <Tab.Screen name={homeName} component={HomeScreen} />
           <Tab.Screen name={UploadName} component={UploadScreen} />
           <Tab.Screen name={TipsandFAQ} component={TipsFAQ}/> 
           <Tab.Screen name={ProfileName} component={ProfileScreen} />
+          <Tab.Screen name ={samera0} component={Camera0} tabBarOptions={{
+            showIcon : 'false',
+            showLabel: 'false',
+          }
+        }/>
+ 
           
-  
         </Tab.Navigator>
+        
       </NavigationContainer>
     );
   }
