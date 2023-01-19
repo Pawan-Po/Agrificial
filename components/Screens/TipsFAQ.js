@@ -1,6 +1,6 @@
 import { ListItem, Text } from "@rneui/themed";
 import React from "react";
-import {View} from "react-native";
+import {View, ScrollView} from "react-native";
 
 const QATab = (props) => {
     const [expanded, setExpanded] = React.useState(false);
@@ -53,7 +53,7 @@ const QATab = (props) => {
     return (
       <ListItem.Accordion
         style={{
-          backgroundColor: "#7ECF8B",
+          backgroundColor: "black",
           borderRadius: 5,
           borderWidth: 2,
           margin: 3,
@@ -138,7 +138,7 @@ const FAQ = () => {
     ];
   
     return (
-      <View>
+      <ScrollView>
         <Text h1 style={{ fontWeight: "bold", padding: 4 }}>
           Tips:
         </Text>
@@ -153,7 +153,7 @@ const FAQ = () => {
         <Accordion title={data[1].title} q={data[1].sub[0].question} a={data[1].sub[0].answer}/>
         <Accordion title={data[2].title} q={data[2].sub[0].question} a={data[2].sub[0].answer}/>  
       
-      </View>
+      </ScrollView>
     );
   };
   

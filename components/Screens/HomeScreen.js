@@ -10,7 +10,7 @@ export default function HomeScreen({ navigation }) {
         </View>
     );
 }
-// import React from 'react';
+// import * as React from 'react';
 // import {StyleSheet, Text, View} from 'react-native';
 // import PieChart from 'react-native-pie-chart';
 

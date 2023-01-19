@@ -1,4 +1,4 @@
-import { Camera } from 'expo-camera';
+import { Camera, CameraType } from 'expo-camera';
 import * as MediaLibrary from 'expo-media-library';
 import Button from '../Button';
 import React, { useState, useEffect, useRef } from 'react';
@@ -68,14 +68,14 @@ export default function Scans({navigation}) {
               }}
             >
               <Button
-                title=""
-                icon="retweet"
-                onPress={() => {
-                  setType(
-                    type === CameraType.back ? CameraType.front : CameraType.back
-                  );
-                }}
-              />
+              title=""
+              icon="retweet"
+              onPress={() => {
+                setType(
+                  type === CameraType.back ? CameraType.front : CameraType.back
+                );
+              }}
+            />
               <Button
                 onPress={() =>
                   setFlash(

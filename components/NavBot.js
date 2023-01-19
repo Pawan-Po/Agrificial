@@ -62,7 +62,7 @@ function NavBot() {
           <Tab.Screen name={UploadName} component={UploadScreen} />
           <Tab.Screen name={TipsandFAQ} component={TipsFAQ}/> 
           <Tab.Screen name={ProfileName} component={ProfileScreen} />
-          <Tab.Screen name ={samera0} component={Camera0} tabBarOptions={{
+          <Tab.Screen name ={samera0} component={Camera0} screenOptions={{
             
           }
         }/>
