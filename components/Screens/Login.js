@@ -14,6 +14,7 @@ import {
   Pressable,
   Modal,
   Image,
+  Alert,
   TextInput,
   Button,
   TouchableOpacity,
@@ -185,7 +186,7 @@ const styles = StyleSheet.create({
   },
   loginText: {
     color:"white",
-  },
+  }
   RememberMe1:{
     paddingTop:10,
     height: 30,

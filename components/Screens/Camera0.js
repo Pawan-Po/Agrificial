@@ -118,7 +118,7 @@ export default function Scans({navigation}) {
 
             </View>
           )}
-            <Button title="Go back" onPress={() => navigation.navigate('Upload')} icon="back" color={'black'}/>  
+            <Button title="Back" onPress={() => navigation.navigate('Upload')} icon="back" color={'black'}/>  
           </View>
     </View>
     );

@@ -16,11 +16,12 @@
 //     );
 // }
 
-import { View, StyleSheet} from 'react-native';
+import { View, StyleSheet, ImageBackground} from 'react-native';
 import Constants from 'expo-constants';
 import Button from './ButtonUpload';
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
+import Dorji from "../../assets/Dorji.png";
 
 
 
@@ -41,7 +42,8 @@ export default function UploadScreen({navigation}) {
   };
 
   return (
-    <View style={styles.container}>
+    <ImageBackground source={Dorji} style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+      
    
         <View  style={styles.buttonContainer2} >
           <Button title="Take a picture" onPress={() => navigation.navigate('Scans')} icon="camera"  />
@@ -50,37 +52,36 @@ export default function UploadScreen({navigation}) {
         <View style={styles.buttonContainer}>
           <Button title ="Upload an image "onPress={pickImageAsync} icon="image" />
         </View>
-      </View>
+      
+      
+      </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#fff',
-    padding: 8,
-  
-  },
+ 
+
 
   buttonContainer: {
-    width: 355,
-    height: 150,
+    width: 200,
+    height: 200,
     marginHorizontal: 20,
-    borderRadius:20,
-    marginTop:20,
+    borderRadius:350,
+    marginTop:40,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor:'black',
+    opacity:0.75
   },
   buttonContainer2: {
-    width: 355,
-    height: 150,
+    width: 200,
+    height: 200,
     marginHorizontal: 20,
-    borderRadius:20,
+    borderRadius:100,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor:'black',
+    opacity:0.75
+
   },
 });

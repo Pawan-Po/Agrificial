@@ -19,7 +19,7 @@ export default function HomeScreen({ navigation }) {
                     image={crop_recommendations}
                 />
                 <Card
-                    title="Plan Disease Detection"
+                    title="Plant Disease Detection"
                     description={"Know what disease your\ncrops are suffering from."}
                     buttonText="Learn More"
                     onPress={() => alert('Card pressed!')}
@@ -72,20 +72,12 @@ export default function HomeScreen({ navigation }) {
 //     margin: 10,
 //   },
 // });
+// export default HomeScreen;
 
 const styles = StyleSheet.create({
     container: {
+       flex:1,
        
     },
-    Dorji: {
-        flex: 1,
-        justifyContent: 'center',
-      },
-    tips_and_FAQ:{
-        height: '100',
-        width:'100'
-    },
-    
 });
 
-// export default HomeScreen;
