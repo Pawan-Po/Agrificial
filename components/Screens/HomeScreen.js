@@ -5,10 +5,12 @@ import crop_recommendations from "../../assets/cropRecommendations.png";
 import plant_disease_detection from "../../assets/plant-disease-detection.png";
 import tips_and_FAQ from "../../assets/tips-and-FAQ.png";
 import Card from './card';
+import Login from './Login';
 
 export default function HomeScreen({ navigation }) {
     return(
         <ImageBackground source={Dorji} style={styles.container}>
+            <Login/>
                 <Card
                     title="Crop Recommendations"
                     description={"Always plant the best crops\nas per your soil quality."}
