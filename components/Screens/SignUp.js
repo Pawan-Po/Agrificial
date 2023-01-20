@@ -130,7 +130,7 @@ export default function SignUp({navigation, setModalVisible, modalVisible,setSig
 </View>
 <Pressable
               style={[styles.loginBtn]}
-              onPress={() => setModalVisible(!modalVisible)}>
+              onPress={() => {setModalVisible(()=>!modalVisible)}}>
               <Text style={styles.loginText}>Sign Up</Text>
 </Pressable>
 

@@ -1,12 +1,20 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
+import * as React from "react";
+import { View, Text, ImageBackground, Pressable } from "react-native";
+import Dorji from "../../assets/Dorji.png";
 
 export default function ProfileScreen({ navigation }) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text
-                onPress={() => navigation.navigate('Home')}
-                style={{ fontSize: 26, fontWeight: 'bold' }}>Profile</Text>
-        </View>
-    );
+  return (
+    <ImageBackground
+      source={Dorji}
+      style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+    >
+      <Pressable
+        onPress={() => navigation.navigate("Home")}
+        style={{ fontSize: 26, fontWeight: "bold" }}
+      >
+        <Text>Profile</Text>
+      </Pressable>
+      
+    </ImageBackground>
+  );
 }

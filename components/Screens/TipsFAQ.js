@@ -1,6 +1,8 @@
 import { ListItem, Text } from "@rneui/themed";
 import React from "react";
-import {View, ScrollView} from "react-native";
+import {View, ScrollView, ImageBackground} from "react-native";
+import Dorji from "../../assets/Dorji.png";
+
 
 const QATab = (props) => {
     const [expanded, setExpanded] = React.useState(false);
@@ -138,15 +140,18 @@ const FAQ = () => {
     ];
   
     return (
+      
+      <ImageBackground source={Dorji} style={{flex:1}}>
       <ScrollView>
-        <Text h1 style={{ fontWeight: "bold", padding: 4 }}>
+
+        <Text h3 style={{ fontWeight: "bold", padding: 4 }}>
           Tips:
         </Text>
         <Accordion title={tips[0].title} q={tips[0].sub[0].question} a={tips[0].sub[0].answer}/>
         <Accordion title={tips[1].title} q={tips[1].sub[0].question} a={tips[1].sub[0].answer}/>
         <Accordion title={tips[2].title} q={tips[2].sub[0].question} a={tips[2].sub[0].answer}/>  
       
-        <Text h1 style={{ fontWeight: "bold", padding: 4 }}>
+        <Text h3 style={{ fontWeight: "bold", padding: 4 }}>
           Frequently Asked Questions:
         </Text>
         <Accordion title={data[0].title} q={data[0].sub[0].question} a={data[0].sub[0].answer}/>
@@ -154,6 +159,7 @@ const FAQ = () => {
         <Accordion title={data[2].title} q={data[2].sub[0].question} a={data[2].sub[0].answer}/>  
       
       </ScrollView>
+      </ImageBackground>
     );
   };
   

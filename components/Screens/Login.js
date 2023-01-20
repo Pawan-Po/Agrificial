@@ -3,18 +3,19 @@ import { StatusBar } from "expo-status-bar";
 //import * as ImagePicker from 'expo-image-picker';
 import React, { useState } from "react";
 import SignUp from "./SignUp";
+import {Avatar} from '@rneui/themed';
+import facebook from "../../assets/icons8-facebook-circled-48.png";
+import google from "../../assets/icons8-google-48.png";
 
 
 
 import {
   StyleSheet,
-  Alert,
   Text,
   View,
   Pressable,
   Modal,
   Image,
-  Alert,
   TextInput,
   Button,
   TouchableOpacity,
@@ -92,12 +93,25 @@ export default function Login ({navigation}) {
       <TouchableOpacity>
         <Text style={styles.forgot_button}>Forgot Password?</Text> 
       </TouchableOpacity>
-      <TouchableOpacity style={styles.loginBtn1}>
-        <Text style={styles.loginText}>Google</Text> 
+        <View style={{flexDirection:'row', justifyContent:'space-evenly' , width:'50%'}}>
+      <TouchableOpacity >
+        <Text style={{padding:3}}><Avatar
+    size={50}
+    rounded
+    source={facebook}
+    
+  /></Text> 
       </TouchableOpacity> 
-      <TouchableOpacity style={styles.loginBtn2}>
-        <Text style={styles.loginText}>Facebook</Text> 
+      <TouchableOpacity >
+        <Text style={{padding:3}} ><Avatar
+    size={50}
+    rounded
+    source={google}
+  
+  /></Text> 
       </TouchableOpacity>
+
+      </View>
       <Text style={styles.RememberMe1}>Don't Have an Account? 
       <Pressable
               style={[styles.RememberMe2]}
@@ -186,18 +200,16 @@ const styles = StyleSheet.create({
   },
   loginText: {
     color:"white",
-  }
+  },
   RememberMe1:{
     paddingTop:10,
     height: 30,
-    marginBottom: 10,
     color:"#000000",
   },
   RememberMe2:{
     paddingTop:10,
     paddingLeft:5,
     height: 30,
-    marginBottom: 10,
     color:"#1DADB6",
   },
 
