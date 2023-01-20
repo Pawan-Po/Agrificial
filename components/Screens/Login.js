@@ -3,11 +3,10 @@ import { StatusBar } from "expo-status-bar";
 //import * as ImagePicker from 'expo-image-picker';
 import React, { useState } from "react";
 import SignUp from "./SignUp";
-import {Avatar} from '@rneui/themed';
-import facebook from "../../assets/icons8-facebook-circled-48.png";
+import Dorji from "../../assets/Dorji.png";
+import { ImageBackground } from "react-native";
+import { Avatar } from "@rneui/themed";
 import google from "../../assets/icons8-google-48.png";
-
-
 
 import {
   StyleSheet,
@@ -21,112 +20,110 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Login ({navigation}) {
-
-    
+export default function Login({ navigation }) {
   const [modalVisible, setModalVisible] = useState(true);
-  const [signVisible, setSignVisible]=useState(false);
+  const [signVisible, setSignVisible] = useState(false);
 
   const [email, setEmail] = useState("");
 
   const [password, setPassword] = useState("");
 
-
   return (
-  <>
-  <Modal
-    animationType="slide"
-    transparent={true}
-    visible={modalVisible}
-    onRequestClose={() => {
-      setModalVisible(!modalVisible);
-    }}> 
-    
-    {!signVisible && <View style={styles.container}>
-
-       <Image style={styles.image} source={require("../../assets/adaptive-icon.png")} /> 
-
-
-      <StatusBar style="auto" />
-
-      <View style={styles.inputView}>
-
-        <TextInput
-
-          style={styles.TextInput}
-
-          placeholder="Enter your Email Address"
-
-          placeholderTextColor="#003f5c"
-
-          onChangeText={(email) => setEmail(email)}
-
-        /> 
-
-      </View> 
-
-
-      <View style={styles.inputView}>
-
-        <TextInput
-
-          style={styles.TextInput}
-
-          placeholder="Password."
-
-          placeholderTextColor="#003f5c"
-
-          secureTextEntry={true}
-
-          onChangeText={(password) => setPassword(password)}/> 
-      </View>
-
+    <>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
       
-      {/* <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.loginText}>LOGIN</Text> 
-      </TouchableOpacity>   */}
-      <Pressable
+
+        {!signVisible && (
+          <View style={styles.container}>
+            <Image
+              style={styles.image}
+              source={require("../../assets/adaptive-icon.png")}
+            />
+
+            <StatusBar style="auto" />
+
+            <View style={styles.inputView}>
+              <TextInput
+                style={styles.TextInput}
+                placeholder="Enter your Email Address"
+                placeholderTextColor="#003f5c"
+                onChangeText={(email) => setEmail(email)}
+              />
+            </View>
+
+            <View style={styles.inputView}>
+              <TextInput
+                style={styles.TextInput}
+                placeholder="Password."
+                placeholderTextColor="#003f5c"
+                secureTextEntry={true}
+                onChangeText={(password) => setPassword(password)}
+              />
+            </View>
+
+            <Pressable
               style={[styles.loginBtn]}
-              onPress={() => setModalVisible(!modalVisible)}>
+              onPress={() => setModalVisible(!modalVisible)}
+            >
               <Text style={styles.loginText}>Login</Text>
-      </Pressable>
-      <TouchableOpacity>
-        <Text style={styles.forgot_button}>Forgot Password?</Text> 
-      </TouchableOpacity>
-        <View style={{flexDirection:'row', justifyContent:'space-evenly' , width:'50%'}}>
-      <TouchableOpacity >
-        <Text style={{padding:3}}><Avatar
-    size={50}
-    rounded
-    source={facebook}
-    
-  /></Text> 
-      </TouchableOpacity> 
-      <TouchableOpacity >
-        <Text style={{padding:3}} ><Avatar
-    size={50}
-    rounded
-    source={google}
-  
-  /></Text> 
-      </TouchableOpacity>
+            </Pressable>
+            <TouchableOpacity>
+              <Text style={styles.forgot_button}>Forgot Password?</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                paddingRight:10,
+              
+                borderRadius: 30,
+                width:'55%',
+                borderWidth: 1,
+                borderColor: "#33ddff",
+              }}
+            >
+              
+                <Text
+                  style={{
+                    paddingVertical: 4,
+                    paddingHorizontal: 10,
+                  }}
+                >
+                  <Avatar size={32} rounded source={google} />{" "}
+                </Text>
+                  <Text style={{fontSize:16 ,marginRight:30}}>Log In With Google</Text>
+              </TouchableOpacity>
+            <Text style={styles.RememberMe1}>
+              Don't Have an Account?
+              <Pressable
+                style={[styles.RememberMe2]}
+                onPress={() => {
+                  setSignVisible(!signVisible);
+                }}
+              >
+                <Text style={styles.RememberMe2}>SignUp</Text>
+              </Pressable>
+            </Text>
+          </View>
+        )}
+        {signVisible && (
+          <SignUp
+            setModalVisible={() => setModalVisible()}
+            setSignVisible={() => setSignVisible()}
+            modalVisible={modalVisible}
+            signVisible={signVisible}
+          />
+        )}
 
-      </View>
-      <Text style={styles.RememberMe1}>Don't Have an Account? 
-      <Pressable
-              style={[styles.RememberMe2]}
-              onPress={() => {setSignVisible(!signVisible)}}>
-             <Text style={styles.RememberMe2} >SignUp</Text> 
-      </Pressable>
-      </Text>
-    </View> }
-    {signVisible && <SignUp setModalVisible={() =>setModalVisible()} setSignVisible={() =>setSignVisible()} modalVisible={modalVisible} signVisible={signVisible}/>}
-    </Modal>
-  
-
-  </>
-    
-
+      </Modal>
+    </>
   );
 }
 const styles = StyleSheet.create({
@@ -137,16 +134,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   image: {
-    height:250,
-    width:250, 
+    height: 250,
+    width: 250,
     marginBottom: 50,
-    paddingBottom:1,
-    paddingTop:3,
+    paddingBottom: 1,
+    paddingTop: 3,
   },
   inputView: {
     backgroundColor: "#fff9f9",
-    borderWidth:1,
-    borderColor:"#03e1ff",
+    borderWidth: 1,
+    borderColor: "#03e1ff",
     borderRadius: 30,
     width: "80%",
     height: 55,
@@ -158,24 +155,23 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     marginLeft: 20,
-    alignSelf:'flex-start',
-    color:'#676565'
+    alignSelf: "flex-start",
+    color: "#676565",
   },
   forgot_button: {
-    paddingTop:10,
+    paddingTop: 10,
     height: 30,
     marginBottom: 10,
   },
   loginBtn: {
     width: "80%",
     borderRadius: 25,
-    paddingTop:5,
+    paddingTop: 5,
     height: 50,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 10,
     backgroundColor: "#1dadb6",
-
   },
   loginBtn1: {
     width: "80%",
@@ -184,9 +180,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 10,
-    paddingTop:-10,
+    paddingTop: -10,
     backgroundColor: "#4285f4",
-
   },
   loginBtn2: {
     width: "80%",
@@ -196,21 +191,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 10,
     backgroundColor: "#294B7D",
-
   },
   loginText: {
-    color:"white",
+    color: "white",
   },
-  RememberMe1:{
-    paddingTop:10,
+  RememberMe1: {
+    paddingTop: 10,
     height: 30,
-    color:"#000000",
+    color: "#000000",
   },
-  RememberMe2:{
-    paddingTop:10,
-    paddingLeft:5,
+  RememberMe2: {
+    paddingTop: 10,
+    paddingLeft: 5,
     height: 30,
-    color:"#1DADB6",
+    marginBottom: 10,
+    color: "#1DADB6",
   },
-
 });

@@ -10,7 +10,7 @@ const QATab = (props) => {
       <ListItem.Accordion
         style={{
           borderRadius: 5,
-          borderWidth: 2,
+         opacity:0.7,
           marginLeft:10,
           marginRight:3,
           marginVertical:3,
@@ -33,12 +33,14 @@ const QATab = (props) => {
       >
         <ListItem
           style={{
+            backgroundColor: "white",
             marginVertical: 3,
+            opacity:0.7,
             marginLeft:12,
             marginRight:3,
             padding: 3,
             borderRadius: 5,
-            borderWidth: 2,
+            
           }}
         >
           <ListItem.Content>
@@ -55,14 +57,14 @@ const QATab = (props) => {
     return (
       <ListItem.Accordion
         style={{
-          backgroundColor: "black",
+          backgroundColor: "#45AA5A",
+          opacity:0.7,
           borderRadius: 5,
-          borderWidth: 2,
           margin: 3,
           height: 75,
         }}
         content={
-          <ListItem.Content>
+          <ListItem.Content >
             <ListItem.Title
               style={{ fontWeight: "bold", backgroundColor: "parent" }}
             >
@@ -144,19 +146,19 @@ const FAQ = () => {
       <ImageBackground source={Dorji} style={{flex:1}}>
       <ScrollView>
 
-        <Text h3 style={{ fontWeight: "bold", padding: 4 }}>
+        <Text h3 style={{ fontWeight: "bold", padding: 4 ,textAlign:'center',marginTop:20}}>
+          Frequently Asked Questions:
+        </Text>
+        <Accordion title={data[0].title} q={data[0].sub[0].question} a={data[0].sub[0].answer}/>
+        <Accordion title={data[1].title} q={data[1].sub[0].question} a={data[1].sub[0].answer}/>
+        <Accordion title={data[2].title} q={data[2].sub[0].question} a={data[2].sub[0].answer}/>  
+        <Text h3 style={{ fontWeight: "bold", padding: 4 ,marginTop:30,textAlign:'center' }}>
           Tips:
         </Text>
         <Accordion title={tips[0].title} q={tips[0].sub[0].question} a={tips[0].sub[0].answer}/>
         <Accordion title={tips[1].title} q={tips[1].sub[0].question} a={tips[1].sub[0].answer}/>
         <Accordion title={tips[2].title} q={tips[2].sub[0].question} a={tips[2].sub[0].answer}/>  
       
-        <Text h3 style={{ fontWeight: "bold", padding: 4 }}>
-          Frequently Asked Questions:
-        </Text>
-        <Accordion title={data[0].title} q={data[0].sub[0].question} a={data[0].sub[0].answer}/>
-        <Accordion title={data[1].title} q={data[1].sub[0].question} a={data[1].sub[0].answer}/>
-        <Accordion title={data[2].title} q={data[2].sub[0].question} a={data[2].sub[0].answer}/>  
       
       </ScrollView>
       </ImageBackground>
