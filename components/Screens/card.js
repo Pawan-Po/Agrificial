@@ -32,19 +32,19 @@ const styles = {
     marginTop: 50,
     width: 350,
     alignSelf: 'center',
-    
+    overflow:'hidden'
   },
   cardImage: {
     width: '100%',
     height: '100%',
     flex: 0.5,
-    //flexDirection: 'row',
     padding:40,
     marginTop: -40,
     marginLeft: 200, 
     alignSelf: 'center',
     margin: 5,
-    borderRadius: 5,   
+    borderRadius: 5,  
+    
   },
   cardTitle: {
     fontSize: 18,
