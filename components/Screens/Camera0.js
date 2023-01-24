@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     },
 
     camera: {
-      flex:12,
+      flex:9,
       paddingTop:40
 
     },

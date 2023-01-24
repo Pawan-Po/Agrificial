@@ -118,14 +118,15 @@ export default function SignUp({setModalVisible,setSignVisible,modalVisible,sign
 
 <TouchableOpacity
               style={[styles.loginBtn]}
-              onPress={() =>{signing()}}>
-              <Text style={styles.loginText}>Sign Up</Text>
+              onPress={() =>{setModalVisible()}}
+              >
+              <Text style={styles.loginText} >Sign Up</Text>
 </TouchableOpacity>
 
 <Text style={styles.RememberMe1}> Already have an account?
       <Text
               style={[styles.RememberMe2]}
-              onPress={() => {setSignVisible(()=>!signVisible); console.log(signVisible)}}>
+              onPress={() => {setSignVisible(()=>!signVisible);}}>
              <Text style={styles.RememberMe2} > LogIn</Text> 
       </Text>
       </Text>
