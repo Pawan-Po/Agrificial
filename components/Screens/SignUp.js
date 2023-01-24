@@ -9,22 +9,23 @@ import {
   Text,
   View,
   Pressable,
-  Modal,
   Image,
   TextInput,
-  Button,
   TouchableOpacity,
+ 
 } from "react-native";
 
-export default function SignUp({navigation, setModalVisible, modalVisible,setSignVisible,signVisible}) {
 
-    
-  //const [modalVisible, setModalVisible] = useState(true);
+
+export default function SignUp({setModalVisible,setSignVisible,modalVisible,signVisible}) {
 
   const [email, setEmail] = useState("");
-
   const [password, setPassword] = useState("");
-
+  const signing = () =>{
+    setModalVisible(!modalVisible);
+    console.log(modalVisible);
+    console.log(signVisible)}
+  
 
   return (
     
@@ -114,32 +115,19 @@ export default function SignUp({navigation, setModalVisible, modalVisible,setSig
 </View> 
 
 
-<View style={styles.inputView}>
 
-<TextInput
-
-  style={styles.TextInput}
-
-  placeholder="Password."
-
-  placeholderTextColor="#003f5c"
-
-  secureTextEntry={true}
-
-  onChangeText={(password) => setPassword(password)}/> 
-</View>
-<Pressable
+<TouchableOpacity
               style={[styles.loginBtn]}
-              onPress={() => {setModalVisible(()=>!modalVisible)}}>
+              onPress={() =>{signing()}}>
               <Text style={styles.loginText}>Sign Up</Text>
-</Pressable>
+</TouchableOpacity>
 
-<Text style={styles.RememberMe1}>Already have an account?
-      <Pressable
+<Text style={styles.RememberMe1}> Already have an account?
+      <Text
               style={[styles.RememberMe2]}
-              onPress={() => {setSignVisible(()=>!signVisible)}}>
-             <Text style={styles.RememberMe2} >LogIn</Text> 
-      </Pressable>
+              onPress={() => {setSignVisible(()=>!signVisible); console.log(signVisible)}}>
+             <Text style={styles.RememberMe2} > LogIn</Text> 
+      </Text>
       </Text>
 
 
@@ -148,9 +136,7 @@ export default function SignUp({navigation, setModalVisible, modalVisible,setSig
 
       
       
-      // {/* <TouchableOpacity style={styles.loginBtn}>
-      //   <Text style={styles.loginText}>LOGIN</Text> 
-      // </TouchableOpacity>   */}
+     
     
 
   );
@@ -234,6 +220,7 @@ const styles = StyleSheet.create({
     color:"#000000",
   },
   RememberMe2:{
+    marginTop:10,
     paddingTop:10,
     paddingLeft:5,
     height: 30,

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, ImageBackground,StyleSheet, } from 'react-native';
+import { View, Text, ImageBackground,StyleSheet,TouchableOpacity,Alert } from 'react-native';
 import Dorji from "../../assets/Dorji.png";
 import crop_recommendations from "../../assets/cropRecommendations.png";
 import plant_disease_detection from "../../assets/plant-disease-detection.png";
@@ -11,27 +11,34 @@ export default function HomeScreen({ navigation }) {
     return(
         <ImageBackground source={Dorji} style={styles.container}>
             <Login/>
+            <TouchableOpacity onPress={() => {console.log("Touch opacity")}}>
+
                 <Card
                     title="Crop Recommendations"
                     description={"Always plant the best crops\nas per your soil quality."}
                     // buttonText="Learn More"
-                    // onPress={() => alert('Card pressed!')}
+                     onPress={() => Alert('Card pressed!')}
                     image={crop_recommendations}
                 />
+            </TouchableOpacity>
+            <TouchableOpacity>
+                
                 <Card
                     title="Plant Disease Detection"
                     description={"Know what disease your\ncrops are suffering from."}
                     buttonText="Learn More"
-                    onPress={() => alert('Card pressed!')}
+                    onPress={() => Alert('Card pressed!')}
                     image={plant_disease_detection }
                 />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => {}}>  
                 <Card
                     title="Tips and FAQ"
                     description={"Learn from the best."}
-                    buttonText="Learn More"
-                    onPress={() => alert('Card pressed!')}
+                    
                     image={tips_and_FAQ}
                 />
+            </TouchableOpacity>
             
        </ImageBackground>  
     );
