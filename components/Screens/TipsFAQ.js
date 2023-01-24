@@ -143,7 +143,7 @@ const FAQ = () => {
   
     return (
       
-      <ImageBackground source={Dorji} style={{flex:1}}>
+      <ImageBackground source={Dorji} style={{flex:1,marginTop:20}}>
       <ScrollView>
 
         <Text h3 style={{ fontWeight: "bold", padding: 4 ,textAlign:'center',marginTop:20}}>

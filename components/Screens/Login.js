@@ -5,7 +5,8 @@ import React, { useState } from "react";
 import SignUp from "./SignUp";
 import Dorji from "../../assets/Dorji.png";
 import { ImageBackground } from "react-native";
-import { Avatar } from "@rneui/themed";
+import { Avatar, Button } from "@rneui/themed";
+import Icon from 'react-native-vector-icons/FontAwesome';
 import google from "../../assets/icons8-google-48.png";
 
 import {
@@ -16,7 +17,6 @@ import {
   Modal,
   Image,
   TextInput,
-  Button,
   TouchableOpacity,
 } from "react-native";
 
@@ -33,12 +33,20 @@ export default function Login({ navigation }) {
       <Modal
         animationType="slide"
         transparent={true}
+        style={{ImageBackground}}
         visible={modalVisible}
         onRequestClose={() => {
           setModalVisible(!modalVisible);
         }}
       >
-      
+      <Button  icon={
+    <Icon
+      name="remove"
+      size={15}
+      color="black"
+    />
+    
+  } onPress={()=>{setModalVisible(!modalVisible)}} title=" " />
 
         {!signVisible && (
           <View style={styles.container}>
@@ -84,7 +92,7 @@ export default function Login({ navigation }) {
                 paddingRight:10,
               
                 borderRadius: 30,
-                width:'55%',
+                width:'auto',
                 borderWidth: 1,
                 borderColor: "#33ddff",
               }}
@@ -101,22 +109,21 @@ export default function Login({ navigation }) {
                   <Text style={{fontSize:16 ,marginRight:30}}>Log In With Google</Text>
               </TouchableOpacity>
             <Text style={styles.RememberMe1}>
-              Don't Have an Account?
-              <Pressable
-                style={[styles.RememberMe2]}
+              Don't Have an Account? 
+              <Text style={[styles.RememberMe2]}
                 onPress={() => {
                   setSignVisible(!signVisible);
                 }}
               >
-                <Text style={styles.RememberMe2}>SignUp</Text>
-              </Pressable>
+                <Text style={styles.RememberMe2}> SignUp</Text>
+              </Text>
             </Text>
           </View>
         )}
         {signVisible && (
           <SignUp
-            setModalVisible={() => setModalVisible()}
-            setSignVisible={() => setSignVisible()}
+            setModalVisible={() => {setModalVisible()}}
+            setSignVisible={() => {setSignVisible()}}
             modalVisible={modalVisible}
             signVisible={signVisible}
           />
@@ -201,6 +208,7 @@ const styles = StyleSheet.create({
     color: "#000000",
   },
   RememberMe2: {
+  
     paddingTop: 10,
     paddingLeft: 5,
     height: 30,
