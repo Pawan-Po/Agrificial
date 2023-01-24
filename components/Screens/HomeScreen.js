@@ -23,7 +23,7 @@ export default function HomeScreen({navigation}){
                     description={"Know what disease your\ncrops are suffering from."}
                     buttonText="Learn More"
                     onPress={() => alert('Card pressed!')}
-                    image={plant_disease_detection }
+                    image={plant_disease_detection}
                 />
                 <Card
                     title="Tips and FAQ"
