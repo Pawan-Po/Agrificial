@@ -64,7 +64,9 @@ function NavBot() {
           <Tab.Screen name={UploadName} component={UploadScreen} options={{headerShown:false}}/>
           <Tab.Screen name={TipsandFAQ} component={TipsFAQ} options={{headerShown:false}}/> 
           <Tab.Screen name={ProfileName} component={ProfileScreen} options={{headerShown:false}}/>
-          <Tab.Screen name={dough} component={Doughnut} options={{headerShown:false}} />
+          <Tab.Screen name={dough} component={Doughnut} options={{headerShown:false,
+          tabBarButton: () => null,
+          tabBarVisible: false,}} />
           <Tab.Screen name ={samera0} component={Camera0} options={{
             tabBarButton: () => null,
             tabBarVisible: false,

@@ -11,7 +11,7 @@ export default function HomeScreen({navigation}){
     return(
         <ImageBackground source={Dorji} style={styles.container}>
             <Login/>
-            <TouchableOpacity onPress={() => {console.log("Touch opacity")}}>
+            <TouchableOpacity onPress={() => navigation.navigate('Doughnut')}>
 
                 <Card
                     title="Crop Recommendations"
