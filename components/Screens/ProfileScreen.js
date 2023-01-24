@@ -48,7 +48,7 @@ export default function ProfileScreen({ navigation }) {
               </TouchableOpacity>
 
             </View>
-            <View  style={styles.cardContainer3}>
+            <View  style={styles.cardContainer2}>
             <Text style={{paddingVertical: 6,paddingHorizontal: 10,}}>
                     <Image source={profile} />
                     <Avatar size={32} rounded source={profile} style={{ borderRadius:25,backgroundColor:'#FFE0E0', }} />{"    "}
@@ -58,7 +58,7 @@ export default function ProfileScreen({ navigation }) {
                 </Text>
                 
             </View>
-            <View  style={styles.cardContainer4}>
+            <View  style={styles.cardContainer2}>
             <Text style={{paddingVertical: 6,paddingHorizontal: 10}}>
                     <Image source={contact} />
                     <Avatar size={32} rounded source={contact} style={{ borderRadius:25,backgroundColor:'#E7D3FF' }} />
@@ -112,42 +112,6 @@ cardContainer: {
     //position:'absolute'
   },
   cardContainer2: {
-    borderWidth: 1,
-    borderRadius: 5,
-    borderColor: '#FFFFFF',
-    borderBottomWidth: 0,
-    backgroundColor: '#FFFFFF',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10,
-    width: 350,
-    height:60,
-    alignSelf: 'center',
-  },
-  cardContainer3: {
-    borderWidth: 1,
-    borderRadius: 5,
-    borderColor: '#FFFFFF',
-    borderBottomWidth: 0,
-    backgroundColor: '#FFFFFF',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10,
-    width: 350,
-    height:60,
-    alignSelf: 'center',
-  },
-  cardContainer4: {
     borderWidth: 1,
     borderRadius: 5,
     borderColor: '#FFFFFF',
