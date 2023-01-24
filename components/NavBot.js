@@ -12,7 +12,7 @@ import TipsFAQ from './Screens/TipsFAQ';
 import ProfileScreen from './Screens/ProfileScreen';
 import Camera0 from './Screens/Camera0';
 import Doughnut from './Screens/Doughnut';
-import cropRecommendation1 from './Screens/CropRecommendation';
+import CropRecommendation1 from './Screens/CropRecommendation';
 
 
 
@@ -68,7 +68,10 @@ function NavBot() {
           <Tab.Screen name={UploadName} component={UploadScreen} options={{headerShown:false}}/>
           <Tab.Screen name={TipsandFAQ} component={TipsFAQ} options={{headerShown:false}}/> 
           <Tab.Screen name={ProfileName} component={ProfileScreen} options={{headerShown:false}}/>
-          <Tab.Screen name={dough} component={Doughnut} options={{headerShown:false,
+          <Tab.Screen name={doughnut} component={Doughnut} options={{headerShown:false,
+          tabBarButton: () => null,
+          tabBarVisible: false,}} />
+          <Tab.Screen name={CropRecommendation_1} component={CropRecommendation1} options={{headerShown:false,
           tabBarButton: () => null,
           tabBarVisible: false,}} />
           <Tab.Screen name ={samera0} component={Camera0} options={{
@@ -76,15 +79,7 @@ function NavBot() {
             tabBarVisible: false,
             headerShown:false,}}
     />
-     <Tab.Screen name ={doughnut} component={Doughnut} options={{
-            tabBarButton: () => null,
-            tabBarVisible: false,}}
-    />
-     <Tab.Screen name ={doughnut} component={Doughnut} options={{
-            tabBarButton: () => null,
-            tabBarVisible: false,}}
-    />
- 
+     
           
         </Tab.Navigator>
         
