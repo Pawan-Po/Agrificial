@@ -9,6 +9,7 @@ import UploadScreen from './Screens/UploadScreen';
 import TipsFAQ from './Screens/TipsFAQ';
 import ProfileScreen from './Screens/ProfileScreen';
 import Camera0 from './Screens/Camera0';
+import Doughnut from './Screens/Doughnut';
 
 
 
@@ -20,6 +21,7 @@ const UploadName = "Upload";
 const ProfileName = "Profile";
 const TipsandFAQ = "TipsFAQ";
 const samera0 = "Scans";
+const dough ="Doughnut"
 
 
 
@@ -30,12 +32,11 @@ function NavBot() {
       <NavigationContainer>
         <Tab.Navigator
           initialRouteName={homeName}
-
-
-
-
-
-          screenOptions={({ route }) => ({
+            screenOptions={({ route }) => ({
+              tabBarActiveTintColor: 'green',
+              tabBarInactiveTintColor: 'black',
+              // tabBarLabelStyle:{fontSize: ,},
+              tabBarStyle: {padding:10, height:80,},
             tabBarIcon: ({ focused, color}) => {
               let iconName;
               let rn = route.name;
@@ -52,26 +53,22 @@ function NavBot() {
               } else if (rn === ProfileName) {
                 iconName = focused ? 'person' : 'person-outline';
               }
+              
               // You can return any component that you like here!
               return <Ionicons name={iconName} size={26} color={color} />;
-            },
-          })}
-          tabBarOptions={{
-            activeTintColor: 'green',
-            inactiveTintColor: 'grey',
-            labelStyle: {fontSize: 12 },
-            style: { padding: 10, height: 50,},
-            
-          }}>
+              
+            },          
+          })}>
   
-          <Tab.Screen name={homeName} component={HomeScreen}/>
-          <Tab.Screen name={UploadName} component={UploadScreen} />
-          <Tab.Screen name={TipsandFAQ} component={TipsFAQ}/> 
-          <Tab.Screen name={ProfileName} component={ProfileScreen} />
- 
+          <Tab.Screen name={homeName} component={HomeScreen} options={{headerShown:false}}/>
+          <Tab.Screen name={UploadName} component={UploadScreen} options={{headerShown:false}}/>
+          <Tab.Screen name={TipsandFAQ} component={TipsFAQ} options={{headerShown:false}}/> 
+          <Tab.Screen name={ProfileName} component={ProfileScreen} options={{headerShown:false}}/>
+          <Tab.Screen name={dough} component={Doughnut} options={{headerShown:false}} />
           <Tab.Screen name ={samera0} component={Camera0} options={{
             tabBarButton: () => null,
-            tabBarVisible: false,}}
+            tabBarVisible: false,
+            headerShown:false,}}
     />
  
           

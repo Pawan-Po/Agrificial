@@ -50,7 +50,7 @@ export default function UploadScreen({navigation}) {
         </View>
         
         <View style={styles.buttonContainer}>
-          <Button title ="Upload an image "onPress={pickImageAsync} icon="image" />
+          <Button title ="Upload an image "onPress={pickImageAsync} icon="images" />
         </View>
       
       

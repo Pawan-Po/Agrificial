@@ -10,7 +10,7 @@ const QATab = (props) => {
       <ListItem.Accordion
         style={{
           borderRadius: 5,
-         opacity:0.7,
+          opacity:0.7,
           marginLeft:10,
           marginRight:3,
           marginVertical:3,

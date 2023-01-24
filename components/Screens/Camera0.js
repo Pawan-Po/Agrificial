@@ -3,11 +3,10 @@ import * as MediaLibrary from 'expo-media-library';
 import Button from '../Button';
 import React, { useState, useEffect, useRef } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
-import Constants from 'expo-constants';
 
 
 
-export default function Scans({navigation}) {
+export default function Scans({navigation,icons,color}) {
     const [hasCameraPermission, setHasCameraPermission] = useState(null);
     const [image, setImage] = useState(null);
     const [type, setType] = useState(Camera.Constants.Type.back);
@@ -113,12 +112,11 @@ export default function Scans({navigation}) {
             </View>
           ) : (
             <View  style={styles.buttonContainer2} >
-
-              <Button title="Take a picture" onPress={takePicture} icon="camera" color={'black'}/>
-
+              <Button  onPress={takePicture} icon="circle"/>
+              <Button onPress={() => navigation.navigate('Upload')} icon="chevron-left" color={'black'} />
             </View>
           )}
-            <Button title="Back" onPress={() => navigation.navigate('Upload')} icon="back" color={'black'}/>  
+            
           </View>
     </View>
     );
@@ -126,36 +124,41 @@ export default function Scans({navigation}) {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      flex:1,
       justifyContent: 'center',
-      paddingTop: Constants.statusBarHeight,
       backgroundColor: '#fff',
-      padding: 8,
+     
     
     },
     controls: {
-      flex: 0.5,
+      flex:1 ,
     },
     button: {
-      width: '100%',
-      height: '100%',
       alignItems: 'center',
       justifyContent: 'center',
-      flexDirection: 'row',
       
     },
     text: {
       fontWeight: 'bold',
       fontSize: 16,
       marginLeft: 10,
-    
     },
+
     camera: {
-      flex: 2,
-      padding:40,
+      flex:12,
+      paddingTop:40
+
     },
     topControls: {
       flex: 1,
+
+    },
+    buttonContainer2: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor:'white',
+      marginBottom:50,
+      flex:1,
     },
 
   });
