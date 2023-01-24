@@ -36,6 +36,7 @@ export default function ProfileScreen({ navigation }) {
                 </Text> 
             </View>
             <View  style={styles.cardContainer2}>
+              <TouchableOpacity onPress={() =>navigation.navigate('CropRecommendation')}>
                 <Text style={{paddingVertical: 6,paddingHorizontal: 10,}}>
                     <Image source={crop} />
                     <Avatar size={32} rounded source={crop} style={{ borderRadius:25,backgroundColor:'#E3E4FF', }} />{"    "}
@@ -43,6 +44,9 @@ export default function ProfileScreen({ navigation }) {
                     {"                        "}
                     <Image source={arrow} />
                 </Text>
+
+              </TouchableOpacity>
+
             </View>
             <View  style={styles.cardContainer3}>
             <Text style={{paddingVertical: 6,paddingHorizontal: 10,}}>

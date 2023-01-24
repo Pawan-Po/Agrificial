@@ -24,6 +24,9 @@ export default function Login({ navigation }) {
   const [modalVisible, setModalVisible] = useState(true);
   const [signVisible, setSignVisible] = useState(false);
 
+  const setModel =()=>{
+    setModalVisible(!modalVisible);
+  }
   const [email, setEmail] = useState("");
 
   const [password, setPassword] = useState("");
@@ -39,15 +42,7 @@ export default function Login({ navigation }) {
           setModalVisible(!modalVisible);
         }}
       >
-      <Button  icon={
-    <Icon
-      name="remove"
-      size={15}
-      color="black"
-    />
-    
-  } onPress={()=>{setModalVisible(!modalVisible)}} title=" " />
-
+      
         {!signVisible && (
           <View style={styles.container}>
             <Image
@@ -78,7 +73,7 @@ export default function Login({ navigation }) {
 
             <Pressable
               style={[styles.loginBtn]}
-              onPress={() => setModalVisible(!modalVisible)}
+              onPress={() => setModel()}
             >
               <Text style={styles.loginText}>Login</Text>
             </Pressable>
@@ -122,7 +117,7 @@ export default function Login({ navigation }) {
         )}
         {signVisible && (
           <SignUp
-            setModalVisible={() => {setModalVisible()}}
+            setModalVisible={() => {setModel()}}
             setSignVisible={() => {setSignVisible()}}
             modalVisible={modalVisible}
             signVisible={signVisible}

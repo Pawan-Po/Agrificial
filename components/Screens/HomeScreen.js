@@ -7,17 +7,17 @@ import tips_and_FAQ from "../../assets/tips-and-FAQ.png";
 import Card from './card';
 import Login from './Login';
 
-export default function HomeScreen({navigation}){
+export default function HomeScreen({ navigation }) {
     return(
         <ImageBackground source={Dorji} style={styles.container}>
             <Login/>
-            <TouchableOpacity onPress={() => navigation.navigate('Doughnut')}>
+            <TouchableOpacity>
 
                 <Card
                     title="Crop Recommendations"
                     description={"Always plant the best crops\nas per your soil quality."}
                     // buttonText="Learn More"
-                     onPress={() => Alert('Card pressed!')}
+                     onPress={() => {}}
                     image={crop_recommendations}
                 />
             </TouchableOpacity>
@@ -31,7 +31,7 @@ export default function HomeScreen({navigation}){
                     image={plant_disease_detection }
                 />
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => {}}>  
+            <TouchableOpacity onPress={()=>{navigation.navigate("TipsFAQ")}}>  
                 <Card
                     title="Tips and FAQ"
                     description={"Learn from the best."}
