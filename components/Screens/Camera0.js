@@ -112,7 +112,7 @@ export default function Scans({navigation,icons,color}) {
             </View>
           ) : (
             <View  style={styles.buttonContainer2} >
-              <Button  onPress={takePicture} icon="circle"/>
+              <Button onPress={takePicture} icon="circle"/>
               <Button onPress={() => navigation.navigate('Upload')} icon="chevron-left" color={'black'} />
             </View>
           )}
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor:'white',
-      marginBottom:50,
+      marginBottom:60,
       flex:1,
     },
 
