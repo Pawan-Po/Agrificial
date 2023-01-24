@@ -11,17 +11,17 @@ export default function HomeScreen({ navigation }) {
     return(
         <ImageBackground source={Dorji} style={styles.container}>
             <Login/>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Doughnut")}}>
 
                 <Card
                     title="Crop Recommendations"
                     description={"Always plant the best crops\nas per your soil quality."}
-                    // buttonText="Learn More"
+                    
                      onPress={() => {}}
                     image={crop_recommendations}
                 />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Upload")}}>
                 
                 <Card
                     title="Plant Disease Detection"
@@ -35,7 +35,6 @@ export default function HomeScreen({ navigation }) {
                 <Card
                     title="Tips and FAQ"
                     description={"Learn from the best."}
-                    
                     image={tips_and_FAQ}
                 />
             </TouchableOpacity>

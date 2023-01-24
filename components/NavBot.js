@@ -9,6 +9,7 @@ import UploadScreen from './Screens/UploadScreen';
 import TipsFAQ from './Screens/TipsFAQ';
 import ProfileScreen from './Screens/ProfileScreen';
 import Camera0 from './Screens/Camera0';
+import Doughnut from './Screens/Doughnut';
 import cropRecommendation1 from './Screens/CropRecommendation';
 
 
@@ -21,7 +22,9 @@ const UploadName = "Upload";
 const ProfileName = "Profile";
 const TipsandFAQ = "TipsFAQ";
 const samera0 = "Scans";
+const doughnut = "Doughnut";
 const CropRecommendation_1="CropRecommendation";
+
 
 
 const Tab = createBottomTabNavigator();
@@ -71,6 +74,10 @@ function NavBot() {
             tabBarVisible: false,}}
     />
     <Tab.Screen name ={CropRecommendation_1} component={cropRecommendation1} options={{
+            tabBarButton: () => null,
+            tabBarVisible: false,}}
+    />
+     <Tab.Screen name ={doughnut} component={Doughnut} options={{
             tabBarButton: () => null,
             tabBarVisible: false,}}
     />
