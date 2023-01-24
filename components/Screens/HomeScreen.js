@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, ImageBackground,StyleSheet,TouchableOpacity,Alert } from 'react-native';
+import {ImageBackground,StyleSheet,TouchableOpacity,Alert } from 'react-native';
 import Dorji from "../../assets/Dorji.png";
 import crop_recommendations from "../../assets/cropRecommendations.png";
 import plant_disease_detection from "../../assets/plant-disease-detection.png";
