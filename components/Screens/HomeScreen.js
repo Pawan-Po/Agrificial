@@ -7,15 +7,15 @@ import tips_and_FAQ from "../../assets/tips-and-FAQ.png";
 import Card from './card';
 import Login from './Login';
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen({navigation}){
     return(
         <ImageBackground source={Dorji} style={styles.container}>
             <Login/>
                 <Card 
                     title="Crop Recommendations"
                     description={"Always plant the best crops\nas per your soil quality."}
-                    // buttonText="Learn More"
-                    // onPress={() => alert('Card pressed!')}
+                    //buttonText="Learn More"
+                    //onPress={() => alert('Card pressed!')}
                     image={crop_recommendations}
                 />
                 <Card

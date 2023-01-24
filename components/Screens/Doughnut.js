@@ -5,7 +5,7 @@ import PieChart from 'react-native-expo-pie-chart';
 
 const Doughnut = () => (
   <View style={styles.container}>
-    <PieChart  
+    <PieChart
       data={[
         {
           key: 'First Data',
@@ -37,7 +37,7 @@ const Doughnut = () => (
       
     />
     <Button icon="image"/>
-    <View style={{alignItems:'center', justifyContent:'center',  }}>
+    <View style={{alignItems:'center', justifyContent:'center',}}>
       <Text style={{color:'red'}}>
         pH
       </Text>
@@ -53,10 +53,10 @@ const Doughnut = () => (
       <Text style={{color:'black'}}>
         Humidity
       </Text>
-      
+    
 
     </View>
-    
+  
   </View>
   
   
