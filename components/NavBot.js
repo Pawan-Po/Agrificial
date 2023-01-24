@@ -37,7 +37,7 @@ function NavBot() {
             screenOptions={({ route }) => ({
               tabBarActiveTintColor: 'green',
               tabBarInactiveTintColor: 'black',
-              // tabBarLabelStyle:{fontSize: ,},
+              tabBarLabelStyle:{fontSize:12},
               tabBarStyle: {padding:10, height:80,},
             tabBarIcon: ({ focused, color}) => {
               let iconName;
