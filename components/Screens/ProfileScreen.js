@@ -27,7 +27,7 @@ export default function ProfileScreen({ navigation }) {
             <Text style={{fontSize:20, fontWeight:'bold',paddingTop:120, color:'white'}}> Profile Name</Text>
             <Text style={{fontSize:10, fontWeight:'bold',paddingTop:10, color:'white'}}> Email</Text>
             <View  style={styles.cardContainer}>
-                <Text style={{paddingVertical: 6,paddingHorizontal: 10,}}>
+                <Text style={{padding:4}}>
                     <Image source={profile} />
                     <Avatar size={32} rounded source={profile} style={{ borderRadius:25,backgroundColor:'#FEDDE9', }}/>{"    "}
                     <Text  style={styles.cardTitle}>User Profile</Text>
@@ -37,7 +37,7 @@ export default function ProfileScreen({ navigation }) {
             </View>
             <View  style={styles.cardContainer2}>
               <TouchableOpacity onPress={() =>navigation.navigate('CropRecommendation')}>
-                <Text style={{paddingVertical: 6,paddingHorizontal: 10,}}>
+                <Text style={{padding:4}}>
                     <Image source={crop} />
                     <Avatar size={32} rounded source={crop} style={{ borderRadius:25,backgroundColor:'#E3E4FF', }} />{"    "}
                     <Text  style={styles.cardTitle}>Crop Recommended</Text>
@@ -49,7 +49,7 @@ export default function ProfileScreen({ navigation }) {
 
             </View>
             <View  style={styles.cardContainer3}>
-            <Text style={{paddingVertical: 6,paddingHorizontal: 10,}}>
+            <Text style={{padding:4}}>
                     <Image source={profile} />
                     <Avatar size={32} rounded source={profile} style={{ borderRadius:25,backgroundColor:'#FFE0E0', }} />{"    "}
                     <Text  style={styles.cardTitle}>Location</Text>
@@ -59,7 +59,7 @@ export default function ProfileScreen({ navigation }) {
                 
             </View>
             <View  style={styles.cardContainer4}>
-            <Text style={{paddingVertical: 6,paddingHorizontal: 10}}>
+            <Text style={{padding:4}}>
                     <Image source={contact} />
                     <Avatar size={32} rounded source={contact} style={{ borderRadius:25,backgroundColor:'#E7D3FF' }} />
                     {"    "}
