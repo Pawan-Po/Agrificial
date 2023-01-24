@@ -11,7 +11,7 @@ export default function HomeScreen({ navigation }) {
     return(
         <ImageBackground source={Dorji} style={styles.container}>
             <Login/>
-                <Card
+                <Card 
                     title="Crop Recommendations"
                     description={"Always plant the best crops\nas per your soil quality."}
                     // buttonText="Learn More"
