@@ -49,6 +49,7 @@ export default function ProfileScreen({ navigation }) {
 
             </View>
             <View  style={styles.cardContainer3}>
+              
             <Text style={{padding:4}}>
                     <Image source={profile} />
                     <Avatar size={32} rounded source={profile} style={{ borderRadius:25,backgroundColor:'#FFE0E0', }} />{"    "}

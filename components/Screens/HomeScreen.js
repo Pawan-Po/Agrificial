@@ -24,8 +24,6 @@ export default function HomeScreen({ navigation }) {
                 <Card
                     title="Plant Disease Detection"
                     description={"Know what disease your\ncrops are suffering from."}
-                    buttonText="Learn More"
-                    onPress={() => Alert('Card pressed!')}
                     image={plant_disease_detection }
                 />
             </TouchableOpacity>
