@@ -76,85 +76,170 @@
 //   },
 // });
 
-import {PieChart,} from "react-native-chart-kit";
-import { Dimensions } from "react-native";
-import { StyleSheet, View,} from 'react-native';
+// import {ProgressChart} from "react-native-chart-kit";
+// import { Dimensions } from "react-native";
+// import { StyleSheet, View,Text} from 'react-native';
 
-const screenWidth = Dimensions.get("screen").width;
-const data = [
+// const screenWidth = Dimensions.get("screen").width;
+// const data = [
+//   {
+//     name: "Seoul",
+//     population: 215,
+//     color: "rgba(131, 167, 234, 1)",
+//     legendFontColor: "#7F7F7F",
+//     legendFontSize: 15
+//   },
+//   {
+//     name: "Toronto",
+//     population: 280,
+//     color: "#F00",
+//     legendFontColor: "#7F7F7F",
+//     legendFontSize: 15
+//   },
+//   {
+//     name: "Beijing",
+//     population: 527,
+//     color: "red",
+//     legendFontColor: "#7F7F7F",
+//     legendFontSize: 15
+//   },
+//   {
+//     name: "New York",
+//     population: 85,
+//     color: "#000000",
+//     legendFontColor: "#7F7F7F",
+//     legendFontSize: 15
+//   },
+//   {
+//     name: "Moscow",
+//     population: 119,
+//     color: "rgb(0, 0, 255)",
+//     legendFontColor: "#7F7F7F",
+//     legendFontSize: 15
+//   }
+// ];
+
+// const data = {
+//   labels: ["Swim", "Bike", "Run", "Climb", "Dance"], // optional
+//   data: [0.4, 0.6, 0.8, 0.2, 0.4]
+// }; 
+// const Doughnut = () => (
+// <View style={styles.container}>
+
+//   <ProgressChart
+//     data={data}
+//     // width={screenWidth}
+//     width={screenWidth}
+//     height={400}
+//     strokeWidth={10}
+//     radius={30}
+//     chartConfig={chartConfig}
+//     hideLegend={true}
+//   />
+
+// </View>
+  
+  // <View style={styles.container}>
+    
+  //   <PieChart
+  //     data={data}
+  //     width={screenWidth}
+  //     height={250}
+  //     chartConfig={chartConfig}
+  //     accessor={"population"}
+  //     backgroundColor={"transparent"}
+  //     paddingLeft={"15"}
+  //     center={[10, 10,]}
+  //     absolute
+      
+  //   />
+  // </View>
+// );
+
+// export default Doughnut;
+
+// const chartConfig = {
+//   backgroundGradientFrom: "#fff",
+//   backgroundGradientTo: "#fff",
+//   color: (opacity = 1) => `rgba(27, 255, 146, ${opacity})`,
+
+  
+// };
+
+// const styles = StyleSheet.create({
+//     container: {
+//       flex:1,
+//       backgroundColor: '#fff',
+//       alignItems: 'center',
+//       justifyContent: 'center',
+      
+//     },
+//   });
+import React from 'react';
+import {
+  SafeAreaView,
+  View,
+  FlatList,
+  StyleSheet,
+  Text,
+  StatusBar,
+} from 'react-native';
+
+const DATA = [
   {
-    name: "Seoul",
-    population: 215,
-    color: "rgba(131, 167, 234, 1)",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: 'pH',
   },
   {
-    name: "Toronto",
-    population: 280,
-    color: "#F00",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
+    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    title: 'Nitrogen',
   },
   {
-    name: "Beijing",
-    population: 527,
-    color: "red",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'Potassium',
   },
   {
-    name: "New York",
-    population: 85,
-    color: "#000000",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
+    id: '231d1411-2311fjckx=0',
+    title: 'Phosphorus',
   },
   {
-    name: "Moscow",
-    population: 119,
-    color: "rgb(0, 0, 255)",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
-  }
+    id: '58694a0f-3da1-471f-bd96-145321wss234',
+    title: 'Humidity',
+  },
 ];
 
-const Doughnut = () => (
-  <View style={styles.container}>
-    
-    <PieChart
-      data={data}
-      width={screenWidth}
-      height={250}
-      chartConfig={chartConfig}
-      accessor={"population"}
-      backgroundColor={"transparent"}
-      paddingLeft={"15"}
-      center={[10, 10,]}
-      absolute
-    />
+const Item = ({title}) => (
+  <View style={styles.item}>
+    <Text style={styles.title}>{title}</Text>
   </View>
 );
 
-export default Doughnut;
-
-const chartConfig = {
-  backgroundGradientFrom: "#1E2923",
-  backgroundGradientFromOpacity: 0,
-  backgroundGradientTo: "#08130D",
-  backgroundGradientToOpacity: 0.5,
-  color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-  strokeWidth: 2, // optional, default 3
-  barPercentage: 0.5,
-  useShadowColorFromDataset: false // optional
+const Doughnut = () => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <FlatList
+        data={DATA}
+        renderItem={({item}) => <Item title={item.title} />}
+        keyExtractor={item => item.id}
+      />
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
-    container: {
-      flex:1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      
-    },
-  });
+  container: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight || 0,
+  },
+  item: {
+    backgroundColor: '#39e75f',
+    padding: 10,
+    marginVertical: 2,
+    marginHorizontal: 16,
+  },
+  title: {
+    fontSize: 32,
+  },
+});
+
+export default Doughnut;
