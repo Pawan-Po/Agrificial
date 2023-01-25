@@ -4,9 +4,8 @@ import Dorji from "../../assets/Dorji.png";
 import { View, Text, ScrollView } from "react-native";
 
 const data = [
-  { company: "DHI", contact_details: ["00975-02-336257", "336258", "dhi@dhi.btr"] },
+  { company: "DHI", contact_details: ["00975-02-336257", "336258", "dhi@dhi.bt"] },
   ,
-  { company: "DHI", contact_details: ["00975-02-336257", "336258", "dhi@dhi.btr"] },
 ];
 const CardView = ({ company, contact_details }) => {
   return (

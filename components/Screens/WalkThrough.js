@@ -24,7 +24,7 @@ const WalkThrough = ({walk,setWalk}) => {
         <OnBoarding />
       </View>
       <View>
-        <Text>Bottom</Text>
+<Button title='Next' buttonStyle={{borderRadius:10,backgroundColor:'#1Dadb6'}}/>
       </View>
     </ImageBackground>
   );

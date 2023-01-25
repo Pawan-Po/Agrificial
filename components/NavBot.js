@@ -14,6 +14,7 @@ import Camera0 from './Screens/Camera0';
 import Doughnut from './Screens/Doughnut';
 import CropRecommendation1 from './Screens/CropRecommendation';
 import UserProfile from './Screens/UserProfile';
+import Contact_1 from './Screens/contact';
 
 
 
@@ -29,6 +30,7 @@ const samera0 = "Scans";
 const doughnut = "Doughnut";
 const CropRecommendation_1="CropRecommendation";
 const UserProfile_1="UserProfile";
+const Contact ="contact";
 
 
 
@@ -82,6 +84,10 @@ function NavBot() {
             tabBarVisible: false,
             headerShown:false,}}
     />
+    <Tab.Screen name ={Contact} component={Contact_1} options={{
+            tabBarButton: () => null,
+            tabBarVisible: false,
+            headerShown:false,}}/>
      <Tab.Screen name ={UserProfile_1} component={UserProfile} options={{
             tabBarButton: () => null,
             tabBarVisible: false,

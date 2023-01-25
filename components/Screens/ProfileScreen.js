@@ -63,6 +63,7 @@ export default function ProfileScreen({ navigation }) {
                 
             </View>
             <View  style={styles.cardContainer2}>
+            <TouchableOpacity onPress={() =>navigation.navigate('contact')}>
             <Text style={{paddingVertical: 6,paddingHorizontal: 10}}>
                     <Image source={contact} />
                     <Avatar size={32} rounded source={contact} style={{ borderRadius:25,backgroundColor:'#E7D3FF' }} />
@@ -71,7 +72,7 @@ export default function ProfileScreen({ navigation }) {
                     {"                                                    "}
                     <Image source={arrow} />
                 </Text>
-     
+            </TouchableOpacity>
             </View>
             
             <TouchableOpacity style={styles.cardButton} onPress={() => alert('Card pressed!')}>
