@@ -7,10 +7,6 @@ const Card = (props) => {
       <Text style={styles.cardTitle}>{props.title}</Text>
       <Text style={styles.cardDescription}>{props.description}</Text>
       <Image source={props.image} style={styles.cardImage} resizeMode="contain" />
-      {/* <TouchableOpacity style={styles.cardButton} onPress={props.onPress}>
-        <Text style={styles.cardButtonText}>{props.buttonText}</Text>
-      </TouchableOpacity> */}
-      
     </View>
   );
 };
@@ -29,8 +25,9 @@ const styles = {
     elevation: 1,
     marginLeft: 5,
     marginRight: 5,
-    marginTop: 50,
+    marginTop: 70,
     width: 350,
+    height:150,
     alignSelf: 'center',
     overflow:'hidden'
   },

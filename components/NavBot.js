@@ -13,6 +13,8 @@ import ProfileScreen from './Screens/ProfileScreen';
 import Camera0 from './Screens/Camera0';
 import Doughnut from './Screens/Doughnut';
 import CropRecommendation1 from './Screens/CropRecommendation';
+import UserProfile from './Screens/UserProfile';
+
 
 
 
@@ -26,6 +28,7 @@ const TipsandFAQ = "TipsFAQ";
 const samera0 = "Scans";
 const doughnut = "Doughnut";
 const CropRecommendation_1="CropRecommendation";
+const UserProfile_1="UserProfile";
 
 
 
@@ -79,7 +82,10 @@ function NavBot() {
             tabBarVisible: false,
             headerShown:false,}}
     />
-     
+     <Tab.Screen name ={UserProfile_1} component={UserProfile} options={{
+            tabBarButton: () => null,
+            tabBarVisible: false,
+            headerShown:false,}}/>
           
         </Tab.Navigator>
         

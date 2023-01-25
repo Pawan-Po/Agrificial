@@ -8,6 +8,7 @@ import { ImageBackground } from "react-native";
 import { Avatar, Button } from "@rneui/themed";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import google from "../../assets/icons8-google-48.png";
+import WalkThrough from "./WalkThrough";
 
 import {
   StyleSheet,
@@ -27,6 +28,7 @@ export default function Login({ navigation }) {
   const setModel =()=>{
     setModalVisible(!modalVisible);
   }
+  const [walk,setWalk]=useState(true);
   const [email, setEmail] = useState("");
 
   const [password, setPassword] = useState("");
@@ -42,8 +44,8 @@ export default function Login({ navigation }) {
           setModalVisible(!modalVisible);
         }}
       >
-      
-        {!signVisible && (
+      {walk && <WalkThrough setWalk={setWalk} walk={walk}/>}
+        {!walk && !signVisible && (
           <View style={styles.container}>
             <Image
               style={styles.image}
@@ -115,7 +117,7 @@ export default function Login({ navigation }) {
             </Text>
           </View>
         )}
-        {signVisible && (
+        {!walk && signVisible && (
           <SignUp
             setModalVisible={() => {setModel()}}
             setSignVisible={() => {setSignVisible()}}

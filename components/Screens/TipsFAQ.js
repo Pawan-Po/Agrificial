@@ -51,7 +51,7 @@ const QATab = (props) => {
     );
   };
   
-  const Accordion = (props) => {
+  const Accordion = ({title,sub}) => {
     const [expanded, setExpanded] = React.useState(false);
   
     return (
@@ -68,7 +68,7 @@ const QATab = (props) => {
             <ListItem.Title
               style={{ fontWeight: "bold", backgroundColor: "parent" }}
             >
-              {props.title}
+              {title}
             </ListItem.Title>
           </ListItem.Content>
         }
@@ -76,8 +76,9 @@ const QATab = (props) => {
         onPress={() => {
           setExpanded(!expanded);
         }}
-      >
-       <QATab q={props.q} a={props.a}/>
+      >{sub.map((item, index) => {return(
+        <QATab key={index} q={item.question} a={item.answer} />
+      );})}
       </ListItem.Accordion>
     );
   };
@@ -92,6 +93,7 @@ const FAQ = () => {
         title: "Saa Related Questions",
         sub: [
           { question: "What is Saa?", answer: "Saa is a software as a service" },
+          {question:"Full form of Saa",answer:"Smart Agriculture Aid"}
         ],
       },
       {
@@ -149,16 +151,16 @@ const FAQ = () => {
         <Text h3 style={{ fontWeight: "bold", padding: 4 ,textAlign:'center',marginTop:20}}>
           Frequently Asked Questions:
         </Text>
-        <Accordion title={data[0].title} q={data[0].sub[0].question} a={data[0].sub[0].answer}/>
-        <Accordion title={data[1].title} q={data[1].sub[0].question} a={data[1].sub[0].answer}/>
-        <Accordion title={data[2].title} q={data[2].sub[0].question} a={data[2].sub[0].answer}/>  
+        {data.map((item, i) => {
+          return(<Accordion title={item.title} sub={item.sub} />);
+        })}
+        
         <Text h3 style={{ fontWeight: "bold", padding: 4 ,marginTop:30,textAlign:'center' }}>
           Tips:
         </Text>
-        <Accordion title={tips[0].title} q={tips[0].sub[0].question} a={tips[0].sub[0].answer}/>
-        <Accordion title={tips[1].title} q={tips[1].sub[0].question} a={tips[1].sub[0].answer}/>
-        <Accordion title={tips[2].title} q={tips[2].sub[0].question} a={tips[2].sub[0].answer}/>  
-      
+        {tips.map((item, i) => {
+          return(<Accordion key={i} title={item.title} sub={item.sub} />);
+        })}      
       
       </ScrollView>
       </ImageBackground>

@@ -4,11 +4,11 @@ import Dorji from "../../assets/Dorji.png";
 import { View, Text, ScrollView } from "react-native";
 
 const data = [
-  { date: "3 Jan , 2023", veggies: ["Potato", "Chilli", "Cauliflower"] },
+  { company: "DHI", contact_details: ["00975-02-336257", "336258", "dhi@dhi.btr"] },
   ,
-  { date: "1 Jan , 2023", veggies: ["Potato", "Tomato", "Cabbage"] },
+  { company: "DHI", contact_details: ["00975-02-336257", "336258", "dhi@dhi.btr"] },
 ];
-const CardView = ({ date, veggies }) => {
+const CardView = ({ company, contact_details }) => {
   return (
     <View
       style={{
@@ -21,9 +21,9 @@ const CardView = ({ date, veggies }) => {
       }}
     >
       <Text style={{ color: "white", fontSize: 20, textAlign: "center" }}>
-        {date}
+        {company}
       </Text>
-      {veggies.map((item, index) => {
+      {contact_details.map((item, index) => {
         return (
           <Text
             style={{
@@ -43,17 +43,17 @@ const CardView = ({ date, veggies }) => {
     </View>
   );
 };
-const CropRecommendation = () => {
+const Contact = () => {
   return (
     <ImageBackground
       source={Dorji}
       style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
     >
-      <Text style={{marginTop:20,fontSize:20,fontWeight:'bold' }}>Crop Recommended</Text>
+      <Text style={{marginTop:20,fontSize:20,fontWeight:'bold' }}>Contact</Text>
       <ScrollView style={{ marginTop: 20, width: 350 }}>
         {data.map((item, index) => {
           return (
-            <CardView key={index} date={item.date} veggies={item.veggies} />
+            <CardView key={index} company={item.company} contact_details={item.contact_details} />
           );
         })}
       </ScrollView>
@@ -61,4 +61,4 @@ const CropRecommendation = () => {
   );
 };
 
-export default CropRecommendation;
+export default Contact;

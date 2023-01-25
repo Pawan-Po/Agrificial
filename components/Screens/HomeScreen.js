@@ -6,9 +6,10 @@ import plant_disease_detection from "../../assets/plant-disease-detection.png";
 import tips_and_FAQ from "../../assets/tips-and-FAQ.png";
 import Card from './card';
 import Login from './Login';
-
+import WalkThrough from './WalkThrough';
 export default function HomeScreen({ navigation }) {
     return(
+         
         <ImageBackground source={Dorji} style={styles.container}>
             <Login/>
             <TouchableOpacity onPress={()=>{navigation.navigate("Doughnut")}}>
@@ -16,8 +17,6 @@ export default function HomeScreen({ navigation }) {
                 <Card
                     title="Crop Recommendations"
                     description={"Always plant the best crops\nas per your soil quality."}
-                    
-                     onPress={() => {}}
                     image={crop_recommendations}
                 />
             </TouchableOpacity>
@@ -26,8 +25,6 @@ export default function HomeScreen({ navigation }) {
                 <Card
                     title="Plant Disease Detection"
                     description={"Know what disease your\ncrops are suffering from."}
-                    buttonText="Learn More"
-                    onPress={() => Alert('Card pressed!')}
                     image={plant_disease_detection }
                 />
             </TouchableOpacity>
@@ -83,7 +80,8 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
        flex:1,
-       
+       justifyContent:'center',
+       alignItems:'center',
     },
 });
 
