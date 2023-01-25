@@ -37,7 +37,7 @@ const MyProfile = ({navigation}) => {
                 <Text style={styles.btnText}>Contact</Text>
                 <Icon name='right' type='antdesign'/>
             </TouchableOpacity>
-            <View style={[styles.btn,{paddingVertical:20,paddingHorizontal:30,backgroundColor:'#B3D2B7',width:200}]}>
+            <View style={[styles.btn,{paddingVertical:20,paddingHorizontal:30,backgroundColor:'#B3D2B7',borderColor:'#B3D2B7',width:200}]}>
                 <Text style={[styles.btnText,{color:'white',fontWeight:'bold'}]}>Sign Out</Text>
                 <Icon name='log-out' type='feather' color='white'/>
             </View>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#B3D2B7',},
     contain:{height:'40%',justifyContent:'center',alignItems:'center'},
     contain2:{
-        backgroundColor:'white',
+        backgroundColor:'#efefef',
         borderTopStartRadius:30,
         borderTopEndRadius:30,
         height:'60%',
@@ -96,12 +96,13 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        borderColor:'black',
+        borderColor:'white',
         borderWidth:1,
         borderRadius:10,
         marginVertical:5,
         width:'90%',
         paddingHorizontal:10,
+        backgroundColor:'white',
     },
     btnText:{
         fontSize:20,
