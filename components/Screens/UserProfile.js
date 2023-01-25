@@ -7,7 +7,6 @@ import check from '../../assets/check.png'
 import checked from '../../assets/checked.png'
 import ticked from '../../assets/ticked.png'
 
-
 const avatarData = [
   { id: 'Acorn', name: 'Acorn', image: require('../../assets/acorn.png') },
   { id: 'Cabbage', name: 'Cabbage', image: require('../../assets/cabbage.png') },
@@ -144,9 +143,7 @@ export default function ProfileScreen({ navigation }) {
               {contact.length > 0 && firstname.length > 0 && email.length > 0 && lastname.length > 0 &&(
                 <Image source={ticked} style={{marginLeft:200,marginTop:-30, marginBottom:10}}/>
               )}
-            </Pressable>
-
-      
+            </Pressable>      
     </View>
   );
 }
