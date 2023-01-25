@@ -52,9 +52,6 @@ const AvatarPicker =(props)=> {
         );
     }
 
-
-
-
 export default AvatarPicker;
 const styles = StyleSheet.create({
     avatar: {
