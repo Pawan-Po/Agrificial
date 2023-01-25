@@ -8,6 +8,7 @@ import profile from '../../assets/user_profile.png'
 import crop from '../../assets/crops_recommended.png'
 import arrow from '../../assets/arrow.png'
 import signout from '../../assets/signout.png'
+import location from '../../assets/location_.png'
 import { Avatar } from "@rneui/themed"; 
 
 
@@ -54,7 +55,7 @@ export default function ProfileScreen({ navigation }) {
             </View>
             <View  style={styles.cardContainer2}>
             <Text style={{paddingVertical: 6,paddingHorizontal: 10,}}>
-                    <Image source={profile} />
+                    <Image source={location} />
                     <Avatar size={32} rounded source={profile} style={{ borderRadius:25,backgroundColor:'#FFE0E0', }} />{"    "}
                     <Text  style={styles.cardTitle}>Location</Text>
                     {"                                                  "}
