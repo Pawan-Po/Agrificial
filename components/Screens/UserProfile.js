@@ -9,12 +9,12 @@ import ticked from '../../assets/ticked.png'
 
 
 const avatarData = [
-  { id: 'Broccoli', name: 'Broccoli', image: require('../../assets/broccoli.png') },
+  { id: 'Acorn', name: 'Acorn', image: require('../../assets/acorn.png') },
   { id: 'Cabbage', name: 'Cabbage', image: require('../../assets/cabbage.png') },
   { id: 'Carrot', name: 'Carrot', image: require('../../assets/carrot.png') },
   { id: 'Corn', name: 'Corn', image: require('../../assets/corn.png') },
-  { id: 'Onion', name: 'Onion', image: require('../../assets/onion.png') },
-  { id: 'Tomato', name: 'Tomato', image: require('../../assets/tomato.png') },
+  { id: 'Apple', name: 'Apple', image: require('../../assets/apple.png') },
+  { id: 'Mushroom', name: 'Mushroom', image: require('../../assets/mushroom.png') },
 ];
 const AvatarPicker =({ava,setAva,getImage})=> {
   
@@ -64,7 +64,8 @@ export default function ProfileScreen({ navigation }) {
   const [username, setUsername]=useState('');
   const [firstname, setFirstname]=useState('');
   const [lastname, setLastname]=useState('');
-  const [dob, setDOB]=useState(new Date());
+  const [email, setEmail]=useState('');
+  const [contact, setContact]=useState('');
   const [image,setImage]=useState(avatarData[0].image);
 
   const getImage =(item)=>{
@@ -84,22 +85,10 @@ export default function ProfileScreen({ navigation }) {
       <Pressable onPress={()=>setAva(!ava)}>
       <Image source={image} style={{height:100,width:100,marginTop:10}}/>
       </Pressable>
-      <Text style={styles.TextLabel}>Username</Text>
+      <Text style={styles.TextLabel}>First Name</Text>
            <View style={styles.inputView}>
               <TextInput
-                value={username}
-                style={styles.TextInput}
-                placeholder="Your Username"
-                placeholderTextColor="#003f5c"
-                onChangeText={(username) => setUsername(username)}
-              />
-              {username.length > 0 &&(
-                <Image source={check} style={{marginLeft:280,marginTop:-30, marginBottom:10}}/>
-              )}
-            </View>
-            <Text style={styles.TextLabel}>First Name</Text>
-           <View style={styles.inputView}>
-              <TextInput
+                value={firstname}
                 style={styles.TextInput}
                 placeholder="Your First Name"
                 placeholderTextColor="#003f5c"
@@ -121,43 +110,30 @@ export default function ProfileScreen({ navigation }) {
                 <Image source={check} style={{marginLeft:280,marginTop:-30, marginBottom:10}}/>
               )}
             </View>
-            <Text style={styles.TextLabel}>Date of Birth</Text>
+            <Text style={styles.TextLabel}>Email</Text>
            <View style={styles.inputView}>
               <TextInput
                 style={styles.TextInput}
-                placeholder="Your birthday(dd-mm-yyyy)"
+                placeholder="Your Email"
                 placeholderTextColor="#003f5c"
-                onChangeText={(dob) => setDOB(dob)}
+                onChangeText={(email) => setEmail(email)}
               />
-              {dob.length > 0 &&(
+              {email.length > 0 &&(
                 <Image source={check} style={{marginLeft:280,marginTop:-30, marginBottom:10}}/>
               )}
-              {/* <DatePicker
-                style={styles.datePickerStyle}
-                date={date} // Initial date from state
-                mode="date" // The enum of date, datetime and time
-                placeholder="select date"
-                format="DD-MM-YYYY"
-                minDate="01-01-2016"
-                maxDate="01-01-2019"
-                confirmBtnText="Confirm"
-                cancelBtnText="Cancel"
-                customStyles={{
-                  dateIcon: {
-                    //display: 'none',
-                    position: 'absolute',
-                    left: 0,
-                    top: 4,
-                    marginLeft: 0,
-                  },
-                  dateInput: {
-                    marginLeft: 36,
-                  },
-                }}
-                onDateChange={(date) => {
-                  setDate(date);
-                }}
-              /> */}
+            </View>
+            
+            <Text style={styles.TextLabel}>Contact</Text>
+           <View style={styles.inputView}>
+              <TextInput
+                style={styles.TextInput}
+                placeholder="Your Contact"
+                placeholderTextColor="#003f5c"
+                onChangeText={(contact) => setContact(contact)}
+              />
+              {contact.length > 0 &&(
+                <Image source={check} style={{marginLeft:280,marginTop:-30, marginBottom:10}}/>
+              )}
               
             </View>
             <Pressable style={styles.btnStyle}>
@@ -165,7 +141,7 @@ export default function ProfileScreen({ navigation }) {
                 Complete 
               </Text>
               <Image source={checked} style={{marginLeft:200,marginTop:-20, marginBottom:10}}/>
-              {dob.length > 0 && username.length > 0 && firstname.length > 0 && lastname.length > 0 &&(
+              {contact.length > 0 && firstname.length > 0 && email.length > 0 && lastname.length > 0 &&(
                 <Image source={ticked} style={{marginLeft:200,marginTop:-30, marginBottom:10}}/>
               )}
             </Pressable>

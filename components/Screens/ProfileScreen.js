@@ -19,12 +19,7 @@ export default function ProfileScreen({ navigation }) {
       source={bg_}
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
     >
-      {/* <Pressable
-        onPress={() => navigation.navigate("Home")}
-        style={{ fontSize: 26, fontWeight: "bold" }}
-      >
-        <Text>Profile</Text>
-      </Pressable> */}
+      
             <Text style={{fontSize:18, fontWeight:'bold',paddingTop:50,paddingBottom:20 }}> User Profile</Text>
             <Image
               source={Dorji}

@@ -4,12 +4,12 @@ import {Button, Icon} from '@rneui/themed';
 
 
 const avatarData = [
-    { id: 'Broccoli', name: 'Broccoli', image: require('../../assets/broccoli.png') },
+    { id: 'Acorn', name: 'Acorn', image: require('../../assets/acorn.png') },
     { id: 'Cabbage', name: 'Cabbage', image: require('../../assets/cabbage.png') },
     { id: 'Carrot', name: 'Carrot', image: require('../../assets/carrot.png') },
     { id: 'Corn', name: 'Corn', image: require('../../assets/corn.png') },
-    { id: 'Onion', name: 'Onion', image: require('../../assets/onion.png') },
-    { id: 'Tomato', name: 'Tomato', image: require('../../assets/tomato.png') },
+    { id: 'Apple', name: 'Apple', image: require('../../assets/apple.png') },
+    { id: 'Mushroom', name: 'Mushroom', image: require('../../assets/mushroom.png') },
 ];
 
 
@@ -67,8 +67,6 @@ const styles = StyleSheet.create({
         
     },
     container:{
-     
-    
         backgroundColor:'white',
         height: 320 ,
         width:'90%',
