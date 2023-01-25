@@ -82,10 +82,10 @@ export default OnBoarding = ({ walk, setWalk }) => {
           <Image source={logo} style={{ height: 150, width: 150 }} />
           <Button
             title={skip ? "Skip" : " "}
+            titleStyle={{ color: "#111111" }}
             onPress={() => {
               setWalk(!walk);
             }}
-            buttonStyle={{ color: "#111111" }}
             type="clear"
           />
         </View>

@@ -152,7 +152,7 @@ const FAQ = () => {
           Frequently Asked Questions:
         </Text>
         {data.map((item, i) => {
-          return(<Accordion title={item.title} sub={item.sub} />);
+          return(<Accordion title={item.title} key={i} sub={item.sub} />);
         })}
         
         <Text h3 style={{ fontWeight: "bold", padding: 4 ,marginTop:30,textAlign:'center' }}>
