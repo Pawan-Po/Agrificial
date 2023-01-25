@@ -9,34 +9,34 @@ import Login from './Login';
 import WalkThrough from './WalkThrough';
 export default function HomeScreen({ navigation }) {
     return(
-         <WalkThrough/>
-    //     <ImageBackground source={Dorji} style={styles.container}>
-    //         <Login/>
-    //         <TouchableOpacity onPress={()=>{navigation.navigate("Doughnut")}}>
+         
+        <ImageBackground source={Dorji} style={styles.container}>
+            <Login/>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Doughnut")}}>
 
-    //             <Card
-    //                 title="Crop Recommendations"
-    //                 description={"Always plant the best crops\nas per your soil quality."}
-    //                 image={crop_recommendations}
-    //             />
-    //         </TouchableOpacity>
-    //         <TouchableOpacity onPress={()=>{navigation.navigate("Upload")}}>
+                <Card
+                    title="Crop Recommendations"
+                    description={"Always plant the best crops\nas per your soil quality."}
+                    image={crop_recommendations}
+                />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Upload")}}>
                 
-    //             <Card
-    //                 title="Plant Disease Detection"
-    //                 description={"Know what disease your\ncrops are suffering from."}
-    //                 image={plant_disease_detection }
-    //             />
-    //         </TouchableOpacity>
-    //         <TouchableOpacity onPress={()=>{navigation.navigate("TipsFAQ")}}>  
-    //             <Card
-    //                 title="Tips and FAQ"
-    //                 description={"Learn from the best."}
-    //                 image={tips_and_FAQ}
-    //             />
-    //         </TouchableOpacity>
+                <Card
+                    title="Plant Disease Detection"
+                    description={"Know what disease your\ncrops are suffering from."}
+                    image={plant_disease_detection }
+                />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("TipsFAQ")}}>  
+                <Card
+                    title="Tips and FAQ"
+                    description={"Learn from the best."}
+                    image={tips_and_FAQ}
+                />
+            </TouchableOpacity>
             
-    //    </ImageBackground>  
+       </ImageBackground>  
     );
 }
 // import * as React from 'react';

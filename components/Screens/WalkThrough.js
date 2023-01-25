@@ -6,7 +6,7 @@ import logo from "../../assets/icon.png";
 import Icon from "react-native-vector-icons";
 import OnBoarding from "./OnBoarding";
 
-const WalkThrough = () => {
+const WalkThrough = ({walk,setWalk}) => {
   return (
     <ImageBackground
       source={slideBg}
@@ -18,7 +18,7 @@ const WalkThrough = () => {
       <View style={{height:'10%',flexDirection:'row',marginTop:50,marginBottom:20,justifyContent:'space-between',alignItems:'center'}}>
         <Button type="clear" color='black' style={{color:'black'}} title="Back"/>
         <Image source={logo} style={{ height: 150, width: 150 }} />
-        <Button title="Skip" style={{color:'black'}} type="clear" />
+        <Button title="Skip" onPress={()=>{setWalk(!walk)}} style={{color:'black'}} type="clear" />
       </View>
       <View style={{ height: "70%" }}>
         <OnBoarding />
