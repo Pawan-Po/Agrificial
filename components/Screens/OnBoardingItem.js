@@ -30,15 +30,17 @@ const styles = StyleSheet.create({
     },
     title: {
         fontWeight: '800',
-        fontSize: 28,
+        width:250,
+        
+        fontSize: 20,
         marginBottom: 10,
-        color: '#493d8a',
-        textAlign: 'center',
+        color: '#111111',
+        textAlign: 'left',
     },
     description:{
+        width:250,
         fontWeight: '300',
-        color: '#62656b',
-        textAlign: 'center',
-        paddingHorizontal: 64,
+        color: '#1DADB6',
+        textAlign: 'left',
     },
 });
