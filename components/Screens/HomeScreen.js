@@ -6,9 +6,9 @@ import plant_disease_detection from "../../assets/plant-disease-detection.png";
 import tips_and_FAQ from "../../assets/tips-and-FAQ.png";
 import Card from './card';
 import Login from './Login';
+import MyProfile from './MyProfile';
 export default function HomeScreen({ navigation }) {
     return(
-         
         <ImageBackground source={Dorji} style={styles.container}>
             <Login/>
             <TouchableOpacity onPress={()=>{navigation.navigate("Doughnut")}}>

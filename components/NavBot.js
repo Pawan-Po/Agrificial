@@ -9,7 +9,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './Screens/HomeScreen';
 import UploadScreen from './Screens/UploadScreen';
 import TipsFAQ from './Screens/TipsFAQ';
-import ProfileScreen from './Screens/ProfileScreen';
+import MyProfile_1 from './Screens/MyProfile';
 import Camera0 from './Screens/Camera0';
 import Doughnut from './Screens/Doughnut';
 import CropRecommendation1 from './Screens/CropRecommendation';
@@ -24,7 +24,7 @@ import Contact_1 from './Screens/contact';
 //Screen names
 const homeName = "Home";
 const UploadName = "Upload";
-const ProfileName = "Profile";
+const myProfile = "MyProfile";
 const TipsandFAQ = "TipsFAQ";
 const samera0 = "Scans";
 const doughnut = "Doughnut";
@@ -42,7 +42,7 @@ function NavBot() {
         <Tab.Navigator
           initialRouteName={homeName}
             screenOptions={({ route }) => ({
-              tabBarActiveTintColor: 'green',
+              tabBarActiveTintColor: '#75AE7C',
               tabBarInactiveTintColor: 'black',
               tabBarLabelStyle:{fontSize:12},
               tabBarStyle: {padding:10, height:80,},
@@ -59,7 +59,7 @@ function NavBot() {
               } else if (rn === TipsandFAQ) {
                 iconName = focused ? 'help-circle' : 'help-circle-outline';
   
-              } else if (rn === ProfileName) {
+              } else if (rn === myProfile) {
                 iconName = focused ? 'person' : 'person-outline';
               }
               
@@ -72,7 +72,7 @@ function NavBot() {
           <Tab.Screen name={homeName} component={HomeScreen} options={{headerShown:false}}/>
           <Tab.Screen name={UploadName} component={UploadScreen} options={{headerShown:false}}/>
           <Tab.Screen name={TipsandFAQ} component={TipsFAQ} options={{headerShown:false}}/> 
-          <Tab.Screen name={ProfileName} component={ProfileScreen} options={{headerShown:false}}/>
+          <Tab.Screen name={myProfile} component={MyProfile_1} options={{headerShown:false}}/>
           <Tab.Screen name={doughnut} component={Doughnut} options={{headerShown:false,
           tabBarButton: () => null,
           tabBarVisible: false,}} />
