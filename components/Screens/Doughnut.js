@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, StyleSheet,Text } from 'react-native';
+import { View,ScrollView, StyleSheet,Text, TouchableOpacity } from 'react-native';
+import {Icon} from 'react-native-elements';
 
 const dataDisp=[
   {id:1,name:'Nitrogen',value:7.5,color:'#0081B1'},
@@ -11,6 +12,7 @@ const dataDisp=[
 ]
 
 const Doughnut = () => {
+  const [bMark,setbMark]=React.useState(false);
   return (
     <View style={style.container}>
       <View style={style.contain_1}>
@@ -24,7 +26,18 @@ const Doughnut = () => {
         })}
 
       </View>
-      <View style={style.contain_2}></View>
+      <View style={style.contain_2}>
+        <TouchableOpacity onPress={()=>{setbMark(!bMark)}} style={{justifyContent:'flex-start',alignItems:'flex-end',marginRight:10,marginTop:10}}>
+          <Icon name='bookmark' type='fontawesome'  reverse reverseColor={bMark?'#58AD9A':'white'} color={!bMark?'#58AD9A':'white'}/>
+        </TouchableOpacity>
+        <ScrollView contentContainerStyle={{justifyContent:'center',alignItems:'center',marginTop:10}}>
+          <View style={{width:'90%',backgroundColor:'white',minHeight:200,borderRadius:10,justifyContent:'flex-start',alignItems:'center'}}>
+          <Text style={{fontSize:18,marginTop:15,fontWeight:'bold'}}>Crop Recommendation</Text>
+          <Text style={{fontSize:15,marginTop:10,fontWeight:'300',paddingHorizontal:25}}>Crop Recommendation </Text>
+
+          </View>
+        </ScrollView>
+      </View>
     </View>
     );
 }
@@ -41,11 +54,13 @@ const style = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-evenly',
     alignItems:'center',
+  
     
   },
   contain_2:{
     height:'50%',
-    backgroundColor:'#B3D2B7'
+    backgroundColor:'#B3D2B7',
+    borderTopStartRadius:30,
   },
   dataView:{
     height:100,
