@@ -1,6 +1,7 @@
 import React from 'react';
-import { View,ScrollView, StyleSheet,Text, TouchableOpacity } from 'react-native';
+import { View,ScrollView, StyleSheet,Text, TouchableOpacity,ImageBackground } from 'react-native';
 import {Icon} from 'react-native-elements';
+import Dorji from '../../assets/Dorji.png'
 
 const dataDisp=[
     {id:1,name:'Nitrogen',value:7.5,color:'#2E9598'},
@@ -28,16 +29,17 @@ const Doughnut = () => {
 
       </View>
       <View style={style.contain_2}>
-        <TouchableOpacity onPress={()=>{setbMark(!bMark)}} style={{justifyContent:'flex-start',alignItems:'flex-end',marginRight:10,marginTop:10}}>
-          <Icon name='bookmark' type='fontawesome'  reverse reverseColor={bMark?'#58AD9A':'white'} color={!bMark?'#58AD9A':'white'}/>
-        </TouchableOpacity>
+        
         <ScrollView contentContainerStyle={{justifyContent:'center',alignItems:'center',marginTop:10}}>
-          <View style={{width:'90%',backgroundColor:'white',minHeight:200,borderRadius:10,justifyContent:'flex-start',alignItems:'center'}}>
+          <View style={{width:'90%',backgroundColor:'white',minHeight:250,borderRadius:10,justifyContent:'flex-start',alignItems:'center'}}>
           <Text style={{fontSize:18,marginTop:15,fontWeight:'bold'}}>Crop Recommendation</Text>
           <Text style={{fontSize:15,marginTop:10,fontWeight:'300',paddingHorizontal:25}}>Crop Recommendation </Text>
 
           </View>
         </ScrollView>
+        <TouchableOpacity onPress={()=>{setbMark(!bMark)}} style={{justifyContent:'flex-start',alignItems:'flex-end',marginRight:10,marginBottom:12}}>
+          <Icon name='bookmark' type='fontawesome'  reverse reverseColor={bMark?'#aaaaaa':'white'} color={!bMark?'#aaaaaa':'white'}/>
+        </TouchableOpacity>
       </View>
     </View>
     </ImageBackground>
@@ -51,7 +53,7 @@ const style = StyleSheet.create({
   },
   contain_1:{
     flex:1,
-    paddingVertical:60,
+    paddingTop:100,
     flexWrap:'wrap',
     flexDirection:'row',
     justifyContent:'space-evenly',
@@ -61,8 +63,7 @@ const style = StyleSheet.create({
   },
   contain_2:{
     flex:1,
-    backgroundColor:'#B3D2B7',
-    borderTopStartRadius:30,
+    paddingTop:5,
   },
   dataView:{
     height:100,
