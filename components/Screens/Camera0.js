@@ -1,4 +1,4 @@
-import { Camera, CameraType } from 'expo-camera';
+import { Camera } from 'expo-camera';
 import * as MediaLibrary from 'expo-media-library';
 import Button from '../Button';
 import React, { useState, useEffect, useRef } from 'react';
@@ -6,10 +6,10 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 
 
 
-export default function Scans({navigation,icons,color}) {
+export default function Scans({navigation}) {
     const [hasCameraPermission, setHasCameraPermission] = useState(null);
     const [image, setImage] = useState(null);
-    const [type, setType] = useState(Camera.Constants.Type.back);
+    // const [type, setType] = useState(Camera.Constants.Type.back);
     const [flash, setFlash] = useState(Camera.Constants.FlashMode.off);
     const cameraRef = useRef(null);
   
@@ -45,7 +45,7 @@ export default function Scans({navigation,icons,color}) {
         }
       }
     };
-  
+
     if (hasCameraPermission === false) {
       return <Text>No access to camera</Text>;
     }
@@ -53,28 +53,27 @@ export default function Scans({navigation,icons,color}) {
     return (
       <View style={styles.container}>
         {!image ? (
-          <Camera
+          <Camera 
             style={styles.camera}
-            type={type}
+            // type={type}
             ref={cameraRef}
             flashMode={flash}
           >
             <View
               style={{
                 flexDirection: 'row',
-                justifyContent: 'space-between',
                 paddingHorizontal: 30,
               }}
             >
-              <Button
+              {/* <Button
               title=""
               icon="retweet"
               onPress={() => {
                 setType(
                   type === CameraType.back ? CameraType.front : CameraType.back
                 );
-              }}
-            />
+              }} */}
+            {/* /> */}
               <Button
                 onPress={() =>
                   setFlash(
@@ -145,7 +144,7 @@ const styles = StyleSheet.create({
     },
 
     camera: {
-      flex:9,
+      flex:10,
       paddingTop:40
 
     },
@@ -162,3 +161,4 @@ const styles = StyleSheet.create({
     },
 
   });
+

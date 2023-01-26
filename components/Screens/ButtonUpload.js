@@ -14,7 +14,7 @@ export default function Button({ title, onPress, icon, color }) {
 
 const styles = StyleSheet.create({
   button: {
-    height: 50,
+    height: 60,
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
