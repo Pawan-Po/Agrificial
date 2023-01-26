@@ -1,160 +1,62 @@
-// import React from 'react';
-// import { StyleSheet, View, Text} from 'react-native';
-// import PieChart from 'react-native-expo-pie-chart';
-// import Button from '../bookbutton';
+import React from 'react';
+import { View, StyleSheet,Text } from 'react-native';
 
-// const Doughnut = () => (
-//   <View style={styles.container}>
-//     <PieChart
-//       data={[
-//         {
-//           key: 'First Data',
-//           count: 100,
-//           color: 'blue',
-//         },
-//         {
-//           key: 'Second Data',
-//           count: 25,
-//           color: 'red',
-//         },
-//         {
-//           key: 'Third Data',
-//           count: 40,
-//           color: 'green',
-//         },
-//         {
-//           key: 'Forth Data',
-//           count: 35,
-//           color: 'orange',
-//         },
-//         {
-//           key:'Fifth Data',
-//           count:23,
-//           color:'black',
-//         }
-//       ]}
-//       length={350}
-      
-//     />
+const dataDisp=[
+  {id:1,name:'Nitrogen',value:7.5,color:'#0081B1'},
+  {id:2,name:'Phosphorus',value:7.5,color:'#007CC8'},
+  {id:3,name:'Potassium',value:7.5,color:'#5D70C3'},
+  {id:4,name:'pH',value:7.5,color:'#9E63AA'},
+  {id:5,name:'Humidity',value:7.5,color:'#BB5D86'},
+  {id:6,name:'EC',value:7.5,color:'#C06565'},
+]
+
+const Doughnut = () => {
+  return (
+    <View style={style.container}>
+      <View style={style.contain_1}>
+        {dataDisp.map((item,index)=>{
+          return(
+            <View key={index} style={[style.dataView,{backgroundColor:item.color}]}>
+              <Text style={{color:'white',fontSize:15}}>{item.name}</Text>
+              <Text style={{color:'#cccccc',fontSize:12}}>{item.value}</Text>
+            </View>
+          )
+        })}
+
+      </View>
+      <View style={style.contain_2}></View>
+    </View>
+    );
+}
+
+const style = StyleSheet.create({
+  container: {
+    flex:1, 
+   
+  },
+  contain_1:{
+    height:'50%',
+    paddingVertical:60,
+    flexWrap:'wrap',
+    flexDirection:'row',
+    justifyContent:'space-evenly',
+    alignItems:'center',
     
-//       <View>
-//         <Text style={{color:'red'}}>
-//           pH
-//         </Text>
-//         <Text style={{color:'blue'}}>
-//           Nitrogen
-//         </Text>
-//         <Text style={{color:'green'}}>
-//           Phosphorus
-//         </Text>
-//         <Text style={{color:'orange'}}>
-//           Potassium
-//         </Text>
-//         <Text style={{color:'black'}}>
-//           Humidity
-//         </Text>
-        
-//       </View>
-
-//       <Button onPress={() => {}} icon='bookmark'   />
-      
-//   </View>
-  
-  
-  
-// );
-
-// export default Doughnut;
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex:1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-    
-//   },
-// });
-
-import {PieChart,} from "react-native-chart-kit";
-import { Dimensions } from "react-native";
-import { StyleSheet, View,} from 'react-native';
-
-const screenWidth = Dimensions.get("screen").width;
-const data = [
-  {
-    name: "Seoul",
-    population: 215,
-    color: "rgba(131, 167, 234, 1)",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
   },
-  {
-    name: "Toronto",
-    population: 280,
-    color: "#F00",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
+  contain_2:{
+    height:'50%',
+    backgroundColor:'#B3D2B7'
   },
-  {
-    name: "Beijing",
-    population: 527,
-    color: "red",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
-  },
-  {
-    name: "New York",
-    population: 85,
-    color: "#000000",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
-  },
-  {
-    name: "Moscow",
-    population: 119,
-    color: "rgb(0, 0, 255)",
-    legendFontColor: "#7F7F7F",
-    legendFontSize: 15
+  dataView:{
+    height:100,
+    width:100,
+    borderRadius:10,
+    margin:10,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:'green'
   }
-];
-
-const Doughnut = () => (
-  <View style={styles.container}>
     
-    <PieChart
-      data={data}
-      width={screenWidth}
-      height={250}
-      chartConfig={chartConfig}
-      accessor={"population"}
-      backgroundColor={"transparent"}
-      paddingLeft={"15"}
-      center={[10, 10,]}
-      absolute
-    />
-  </View>
-);
+});
 
-export default Doughnut;
-
-const chartConfig = {
-  backgroundGradientFrom: "#1E2923",
-  backgroundGradientFromOpacity: 0,
-  backgroundGradientTo: "#08130D",
-  backgroundGradientToOpacity: 0.5,
-  color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-  strokeWidth: 2, // optional, default 3
-  barPercentage: 0.5,
-  useShadowColorFromDataset: false // optional
-};
-
-const styles = StyleSheet.create({
-    container: {
-      flex:1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      
-    },
-  });
+export default Doughnut
