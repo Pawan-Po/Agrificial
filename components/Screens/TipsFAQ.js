@@ -55,7 +55,7 @@ const QATab = (props) => {
     return (
       <ListItem.Accordion
         style={{
-          backgroundColor: "#B3D2B7",
+          backgroundColor: "#A3BFA6",
           borderRadius: 5,
           margin: 3,
           height: 75,
