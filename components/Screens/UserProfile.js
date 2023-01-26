@@ -19,7 +19,6 @@ const AvatarPicker =({ava,setAva,getImage})=> {
   
   const [selectedAvatar,setSelectedAvatar]=useState(null);
 
-
       return (
           <Modal
           animationType="slide"
@@ -31,7 +30,6 @@ const AvatarPicker =({ava,setAva,getImage})=> {
             setAva();
           }}
           >
-
           <View style={styles.container}>
               <Text style={{ fontSize:25,fontWeight:'bold', justifyContent:'center',marginLeft:40,}}>Select an Avatar</Text>
               <FlatList
@@ -60,7 +58,6 @@ const AvatarPicker =({ava,setAva,getImage})=> {
 
 export default function ProfileScreen({ navigation }) {
   const [ava,setAva]=useState(false)
-  const [username, setUsername]=useState('');
   const [firstname, setFirstname]=useState('');
   const [lastname, setLastname]=useState('');
   const [email, setEmail]=useState('');
@@ -177,7 +174,7 @@ const styles = StyleSheet.create({
     fontSize:30,
     height:50,
     color:'#cccccc',
-    borderRadius:10,
+    borderRadius:20,
     borderWidth:2,
     borderColor:'#14E2BD',
     width:'80%', 
@@ -198,7 +195,6 @@ const styles = StyleSheet.create({
     
 },
 container:{
- 
 
     backgroundColor:'white',
     width:'90%',
