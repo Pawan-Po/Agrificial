@@ -10,7 +10,6 @@ const QATab = (props) => {
       <ListItem.Accordion
         style={{
           borderRadius: 5,
-          opacity:0.7,
           marginLeft:10,
           marginRight:3,
           marginVertical:3,
@@ -35,7 +34,6 @@ const QATab = (props) => {
           style={{
             backgroundColor: "white",
             marginVertical: 3,
-            opacity:0.7,
             marginLeft:12,
             marginRight:3,
             padding: 3,
@@ -57,8 +55,7 @@ const QATab = (props) => {
     return (
       <ListItem.Accordion
         style={{
-          backgroundColor: "#45AA5A",
-          opacity:0.7,
+          backgroundColor: "#B3D2B7",
           borderRadius: 5,
           margin: 3,
           height: 75,
@@ -152,7 +149,7 @@ const FAQ = () => {
           Frequently Asked Questions:
         </Text>
         {data.map((item, i) => {
-          return(<Accordion title={item.title} sub={item.sub} />);
+          return(<Accordion title={item.title} key={i} sub={item.sub} />);
         })}
         
         <Text h3 style={{ fontWeight: "bold", padding: 4 ,marginTop:30,textAlign:'center' }}>
