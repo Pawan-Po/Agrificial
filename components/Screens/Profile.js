@@ -37,10 +37,12 @@ const Profile = ({navigation}) => {
                 <Text style={styles.btnText}>Contact</Text>
                 <Icon name='right' type='antdesign'/>
             </TouchableOpacity>
+            <TouchableOpacity>
             <View style={[styles.btn,{paddingVertical:20,paddingHorizontal:30,backgroundColor:'#B3D2B7',borderColor:'#B3D2B7',width:200}]}>
                 <Text style={[styles.btnText,{color:'white',fontWeight:'bold'}]}>Sign Out</Text>
                 <Icon name='log-out' type='feather' color='white'/>
             </View>
+            </TouchableOpacity>
 
         </View>
         <View style={styles.contain3}>

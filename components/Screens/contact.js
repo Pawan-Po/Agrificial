@@ -61,7 +61,7 @@ const Contact = () => {
       source={Dorji}
       style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
     >
-      <Text style={{ marginTop: 20, fontSize: 20, fontWeight: "bold" }}>
+      <Text style={{ marginTop: 45, fontSize: 20, fontWeight: "bold" }}>
         Contact
       </Text>
       <ScrollView style={{ marginTop: 20, width: 350 }}>

@@ -46,7 +46,7 @@ const CropRecommendation = () => {
       source={Dorji}
       style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
     >
-      <Text style={{ marginTop: 20, fontSize: 20, fontWeight: "bold" }}>
+      <Text style={{ marginTop: 45, fontSize: 20, fontWeight: "bold" }}>
         Crop Recommended
       </Text>
       <ScrollView style={{ marginTop: 20, width: 350 }}>
