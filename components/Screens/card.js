@@ -17,7 +17,7 @@ const styles = {
     borderRadius: 10,
     borderColor: '#ddd',
     borderBottomWidth: 0,
-    backgroundColor: '#212121',
+    backgroundColor: '#B3D2B7',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -32,7 +32,7 @@ const styles = {
     overflow:'hidden'
   },
   cardImage: {
-    width: '100%',
+    width: '50%',
     height: '100%',
     flex: 0.5,
     padding:40,
@@ -44,15 +44,19 @@ const styles = {
     
   },
   cardTitle: {
-    fontSize: 18,
+    fontSize: 20,
     margin: 5,
-    color: '#fff',
+    color: '#686963',
+    fontWeight:'bold',
+    paddingTop: 10,
+    paddingLeft:10,
   },
   cardDescription: {
-    fontSize: 14,
+    fontSize: 15,
     margin: 5,
-    color: '#fff',
-    paddingTop: 10, 
+    color: '#4E937A',
+    paddingTop: 10,
+    paddingLeft:10, 
   },
   cardButton: {
     backgroundColor: '#0288D1',
