@@ -85,8 +85,8 @@ export default function Login({ navigation }) {
               style={{
                 flexDirection: "row",
                 alignItems: "center",
-                paddingRight:10,
-              
+                justifyContent:'space-evenly',
+                padding:10,
                 borderRadius: 30,
                 width:'auto',
                 borderWidth: 1,
@@ -94,15 +94,9 @@ export default function Login({ navigation }) {
               }}
             >
               
-                <Text
-                  style={{
-                    paddingVertical: 4,
-                    paddingHorizontal: 10,
-                  }}
-                >
-                  <Avatar size={32} rounded source={google} />{" "}
-                </Text>
-                  <Text style={{fontSize:16 ,marginRight:30}}>Log In With Google</Text>
+                  <Avatar size={32} rounded source={google} />
+            
+                  <Text style={{fontSize:16 ,marginHorizontal:20}}>Log In With Google</Text>
               </TouchableOpacity>
             <Text style={styles.RememberMe1}>
               Don't Have an Account? 
