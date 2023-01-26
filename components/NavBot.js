@@ -9,7 +9,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './Screens/HomeScreen';
 import UploadScreen from './Screens/UploadScreen';
 import TipsFAQ from './Screens/TipsFAQ';
-import MyProfile_1 from './Screens/MyProfile';
+import Profile_1 from './Screens/Profile'
 import Camera0 from './Screens/Camera0';
 import Doughnut from './Screens/Doughnut';
 import CropRecommendation1 from './Screens/CropRecommendation';
@@ -24,7 +24,7 @@ import Contact_1 from './Screens/contact';
 //Screen names
 const homeName = "Home";
 const UploadName = "Upload";
-const myProfile = "MyProfile";
+const Profile = "Profile";
 const TipsandFAQ = "TipsFAQ";
 const samera0 = "Scans";
 const doughnut = "Doughnut";
@@ -59,7 +59,7 @@ function NavBot() {
               } else if (rn === TipsandFAQ) {
                 iconName = focused ? 'help-circle' : 'help-circle-outline';
   
-              } else if (rn === myProfile) {
+              } else if (rn === Profile) {
                 iconName = focused ? 'person' : 'person-outline';
               }
               
@@ -72,7 +72,7 @@ function NavBot() {
           <Tab.Screen name={homeName} component={HomeScreen} options={{headerShown:false}}/>
           <Tab.Screen name={UploadName} component={UploadScreen} options={{headerShown:false}}/>
           <Tab.Screen name={TipsandFAQ} component={TipsFAQ} options={{headerShown:false}}/> 
-          <Tab.Screen name={myProfile} component={MyProfile_1} options={{headerShown:false}}/>
+          <Tab.Screen name={Profile} component={Profile_1} options={{headerShown:false}}/>
           <Tab.Screen name={doughnut} component={Doughnut} options={{headerShown:false,
           tabBarButton: () => null,
           tabBarVisible: false,}} />
@@ -84,11 +84,11 @@ function NavBot() {
             tabBarVisible: false,
             headerShown:false,}}
     />
-    <Tab.Screen name ={Contact} component={Contact_1} options={{
+          <Tab.Screen name ={Contact} component={Contact_1} options={{
             tabBarButton: () => null,
             tabBarVisible: false,
             headerShown:false,}}/>
-     <Tab.Screen name ={UserProfile_1} component={UserProfile} options={{
+          <Tab.Screen name ={UserProfile_1} component={UserProfile} options={{
             tabBarButton: () => null,
             tabBarVisible: false,
             headerShown:false,}}/>

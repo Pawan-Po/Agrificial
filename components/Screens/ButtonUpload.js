@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { Entypo } from '@expo/vector-icons';
+import { FontAwesome} from '@expo/vector-icons';
 
 
 export default function Button({ title, onPress, icon, color }) {
   return (
     <TouchableOpacity onPress={onPress} style={styles.button}>
-      <Entypo name={icon} size={50} color={color ? color : '#f1f1f1'} />
+      <FontAwesome name={icon} size={53} color={color ? color : 'black'} />
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: 'bold',
     fontSize: 18,
-    color: '#f1f1f1f1',
+    color: 'black',
     marginLeft: 10,
     padding:10,
   

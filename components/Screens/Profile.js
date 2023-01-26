@@ -3,7 +3,7 @@ import { View, Text, StyleSheet,Image, TouchableOpacity } from 'react-native';
 import profile from '../../assets/acorn.png';
 import {Icon} from 'react-native-elements';
 
-const MyProfile = ({navigation}) => {
+const Profile = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.contain}>
@@ -54,8 +54,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor:'#B3D2B7',},
-    contain:{height:'40%',justifyContent:'center',alignItems:'center'},
-    contain2:{
+        contain:{height:'40%',justifyContent:'center',alignItems:'center'},
+        contain2:{
         backgroundColor:'#efefef',
         borderTopStartRadius:30,
         borderTopEndRadius:30,
@@ -111,4 +111,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default MyProfile
+export default Profile

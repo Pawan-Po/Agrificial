@@ -17,7 +17,6 @@
 // }
 
 import { View, StyleSheet, ImageBackground} from 'react-native';
-import Constants from 'expo-constants';
 import Button from './ButtonUpload';
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
@@ -46,11 +45,11 @@ export default function UploadScreen({navigation}) {
       
    
         <View  style={styles.buttonContainer2} >
-          <Button title="Take a picture" onPress={() => navigation.navigate('Scans')} icon="camera"  />
+          <Button title="Take a picture" onPress={() => navigation.navigate('Scans')} icon="camera-retro"  />
         </View>
         
         <View style={styles.buttonContainer}>
-          <Button title ="Upload an image "onPress={pickImageAsync} icon="images" />
+          <Button title ="Upload an image "onPress={pickImageAsync} icon="image" />
         </View>
       
       
@@ -70,8 +69,8 @@ const styles = StyleSheet.create({
     marginTop:40,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor:'black',
-    opacity:0.75
+    backgroundColor:'#B3D2B7',
+    opacity:0.8
   },
   buttonContainer2: {
     width: 200,
@@ -80,8 +79,8 @@ const styles = StyleSheet.create({
     borderRadius:100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor:'black',
-    opacity:0.75
+    backgroundColor:'#B3D2B7',
+    opacity:0.8
 
   },
 });
