@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
 import AIcon from "react-native-vector-icons/AntDesign";
-import logo from "../../assets/icon.png";
+import logo from "../../assets/log2.png";
 import slideBg from "../../assets/SliderBackground.png";
 
 import {
