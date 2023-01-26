@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Alert,TextInput,FlatList,Modal,StyleSheet,Image,View, Text, TouchableOpacity, Pressable } from 'react-native';
 import {Button, Icon} from '@rneui/themed';
-import Dorji from "../../assets/Dorji.png";
-import profile from '../../assets/profile_.png'
 import check from '../../assets/check.png'
 import checked from '../../assets/checked.png'
 import ticked from '../../assets/ticked.png'

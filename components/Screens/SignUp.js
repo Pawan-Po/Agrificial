@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-//import NavBot from 'r/NavBot';
-//import * as ImagePicker from 'expo-image-picker';
+
 import React, { useState } from "react";
 
 
@@ -8,7 +7,6 @@ import {
   StyleSheet,
   Text,
   View,
-  Pressable,
   Image,
   TextInput,
   TouchableOpacity,

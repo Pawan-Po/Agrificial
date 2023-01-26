@@ -9,7 +9,6 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 export default function Scans({navigation}) {
     const [hasCameraPermission, setHasCameraPermission] = useState(null);
     const [image, setImage] = useState(null);
-    // const [type, setType] = useState(Camera.Constants.Type.back);
     const [flash, setFlash] = useState(Camera.Constants.FlashMode.off);
     const cameraRef = useRef(null);
   
@@ -65,15 +64,6 @@ export default function Scans({navigation}) {
                 paddingHorizontal: 30,
               }}
             >
-              {/* <Button
-              title=""
-              icon="retweet"
-              onPress={() => {
-                setType(
-                  type === CameraType.back ? CameraType.front : CameraType.back
-                );
-              }} */}
-            {/* /> */}
               <Button
                 onPress={() =>
                   setFlash(

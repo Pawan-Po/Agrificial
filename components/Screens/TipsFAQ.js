@@ -1,6 +1,6 @@
 import { ListItem, Text } from "@rneui/themed";
 import React from "react";
-import {View, ScrollView, ImageBackground} from "react-native";
+import { ScrollView, ImageBackground} from "react-native";
 import Dorji from "../../assets/Dorji.png";
 
 

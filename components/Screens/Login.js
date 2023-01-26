@@ -1,12 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-//import NavBot from 'r/NavBot';
-//import * as ImagePicker from 'expo-image-picker';
 import React, { useState } from "react";
 import SignUp from "./SignUp";
-import Dorji from "../../assets/Dorji.png";
 import { ImageBackground } from "react-native";
-import { Avatar, Button } from "@rneui/themed";
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { Avatar } from "@rneui/themed";
 import google from "../../assets/icons8-google-48.png";
 import OnBoarding from "./OnBoarding";
 import {
