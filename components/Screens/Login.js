@@ -16,7 +16,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Login({ navigation }) {
+export default function Login({}) {
   const [modalVisible, setModalVisible] = useState(true);
   const [signVisible, setSignVisible] = useState(false);
 
