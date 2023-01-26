@@ -8,8 +8,9 @@ const dataDisp=[
     {id:2,name:'Phosphorus',value:7.5,color:'#F7DB69'},
     {id:3,name:'Potassium',value:7.5,color:'#E68E65'},
     {id:4,name:'pH',value:7.5,color:'#AEC77B'},
-    {id:5,name:'Humidity',value:7.5,color:'#C6A779'},
-    {id:6,name:'EC',value:7.5,color:'#E2BEF1'},
+    {id:5,name:'EC',value:7.5,color:'#E2BEF1'},
+    {id:6,name:'Humidity',value:7.5,color:'#C6A779'},
+    
   ]
 
 const Doughnut = () => {
