@@ -96,7 +96,7 @@ export default function Login({ navigation }) {
               
                   <Avatar size={32} rounded source={google} />
             
-                  <Text style={{fontSize:16 ,marginHorizontal:30}}>Log In With Google</Text>
+                  <Text style={{fontSize:16 ,marginHorizontal:20}}>Log In With Google</Text>
               </TouchableOpacity>
             <Text style={styles.RememberMe1}>
               Don't Have an Account? 
