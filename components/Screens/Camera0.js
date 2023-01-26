@@ -37,7 +37,7 @@ export default function Scans({navigation}) {
       if (image) {
         try {
           const asset = await MediaLibrary.createAssetAsync(image);
-          alert('Picture saved! 🎉 Bitchasss');
+          alert('Picture saved! 🎉');
           setImage(null);
           console.log('saved successfully');
         } catch (error) {
@@ -53,7 +53,7 @@ export default function Scans({navigation}) {
     return (
       <View style={styles.container}>
         {!image ? (
-          <Camera ratio='16:10'
+          <Camera 
             style={styles.camera}
             // type={type}
             ref={cameraRef}
