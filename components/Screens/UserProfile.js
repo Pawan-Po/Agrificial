@@ -1,17 +1,38 @@
 import React, { useState } from 'react';
 import { Alert,TextInput,FlatList,Modal,StyleSheet,Image,View, Text, TouchableOpacity, Pressable } from 'react-native';
 import {Button, Icon} from '@rneui/themed';
+import Dorji from "../../assets/Dorji.png";
+import profile from '../../assets/profile_.png'
 import check from '../../assets/check.png'
 import checked from '../../assets/checked.png'
 import ticked from '../../assets/ticked.png'
 
 const avatarData = [
   { id: 'Acorn', name: 'Acorn', image: require('../../assets/acorn.png') },
-  { id: 'Cabbage', name: 'Cabbage', image: require('../../assets/cabbage.png') },
   { id: 'Carrot', name: 'Carrot', image: require('../../assets/carrot.png') },
   { id: 'Corn', name: 'Corn', image: require('../../assets/corn.png') },
   { id: 'Apple', name: 'Apple', image: require('../../assets/apple.png') },
   { id: 'Mushroom', name: 'Mushroom', image: require('../../assets/mushroom.png') },
+  { id: 'Spinach', name: 'Spinach', image: require('../../assets/SPINACH.png') },
+  { id: 'Banguin', name: 'Banguin', image: require('../../assets/BANGUIN.png') },
+  { id: 'Broccoli', name: 'Broccoli', image: require('../../assets/BROCCOLI.png') },
+  { id: 'BRUSSEL', name: 'Brussel', image: require('../../assets/BRUSSEL_SPROUTS.png') },
+  { id: 'CABBAGE', name: 'Cabbage', image: require('../../assets/CABBAGE.png') },
+  { id: 'Chili', name: 'Chili', image: require('../../assets/CHILLI.png') },
+  { id: 'Maize', name: 'Maize', image: require('../../assets/MAIZE.png') },
+  { id: 'Garlic', name: 'Garlic', image: require('../../assets/GARLIC.png') },
+  { id: 'Ginger', name: 'Ginger', image: require('../../assets/GINGER.png') },
+  { id: 'Potato', name: 'Potato', image: require('../../assets/POTATO.png') },
+  { id: 'Tomato', name: 'Tomato', image: require('../../assets/TOMATO.png') },
+  { id: 'Raddish', name: 'Raddish', image: require('../../assets/RADDISH.png') },
+  { id: 'Zuccini', name: 'Zuccini', image: require('../../assets/ZUCCINI.png') },
+  
+
+
+
+
+
+
 ];
 const AvatarPicker =({ava,setAva,getImage})=> {
   
@@ -38,7 +59,7 @@ const AvatarPicker =({ava,setAva,getImage})=> {
                       <View style={{ width: 100, height: 100 }}>
                       <TouchableOpacity onPress={() => setSelectedAvatar(item)}>
                           <Image source={item.image} style={styles.avatar} />
-                          <Text>{item.name}</Text>
+                          <Text style={{alignItems:"center",justifyContent:"center",paddingLeft:10,}}>{item.name}</Text>
                       </TouchableOpacity>
                       </View>
                   )}
@@ -188,7 +209,9 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 25,
     margin:10,
-    paddingTop:-50
+    paddingTop:-50,
+    alignContent:"center",
+    paddingLeft:30,
 
     
 },
