@@ -15,6 +15,8 @@ const dataDisp=[
 
 const Doughnut = () => {
   const [bMark,setbMark]=React.useState(false);
+  const [rMark,setrMark]=React.useState(false);
+
   return (
     <ImageBackground source={Dorji} style={style.container}>
     <View style={style.container}>
@@ -38,9 +40,14 @@ const Doughnut = () => {
 
           </View>
         </ScrollView>
+        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+        <TouchableOpacity onPress={()=>{setrMark(!rMark)}} style={{justifyContent:'flex-start',alignItems:'flex-start',marginLeft:10,marginBottom:12}}>
+          <Icon name='ccw' type='entypo'  reverse reverseColor={rMark?'#aaaaaa':'white'} color={!rMark?'#aaaaaa':'white'}/>
+        </TouchableOpacity>
         <TouchableOpacity onPress={()=>{setbMark(!bMark)}} style={{justifyContent:'flex-start',alignItems:'flex-end',marginRight:10,marginBottom:12}}>
           <Icon name='bookmark' type='fontawesome'  reverse reverseColor={bMark?'#aaaaaa':'white'} color={!bMark?'#aaaaaa':'white'}/>
         </TouchableOpacity>
+        </View>
       </View>
     </View>
     </ImageBackground>
