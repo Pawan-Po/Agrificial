@@ -184,6 +184,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import Button from '../bookbutton';
 
 const DATA = [
   {
@@ -222,6 +223,7 @@ const Doughnut = () => {
         renderItem={({item}) => <Item title={item.title} />}
         keyExtractor={item => item.id}
       />
+       <Button onPress={() => {}} icon='bookmark'   />
     </SafeAreaView>
   );
 };
