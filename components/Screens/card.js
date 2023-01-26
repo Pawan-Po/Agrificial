@@ -36,12 +36,11 @@ const styles = {
     height: '100%',
     flex: 0.5,
     padding:40,
-    marginTop: -40,
+    marginTop: -60,
     marginLeft: 200, 
     alignSelf: 'center',
     margin: 5,
     borderRadius: 5,  
-    
   },
   cardTitle: {
     fontSize: 20,
